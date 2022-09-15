@@ -1,4 +1,4 @@
-package util;
+package com.example.term_project_javafx.util;
 
 import java.io.Serializable;
 

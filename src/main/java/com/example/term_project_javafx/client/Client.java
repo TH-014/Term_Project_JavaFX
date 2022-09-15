@@ -1,6 +1,8 @@
-package client;
+package com.example.term_project_javafx.client;
 
-import util.SocketWrapper;
+import com.example.term_project_javafx.util.SocketWrapper;
+import com.example.term_project_javafx.util.Movie;
+import com.example.term_project_javafx.util.Message;
 import java.util.Scanner;
 
 public class Client {

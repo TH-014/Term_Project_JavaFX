@@ -1,7 +1,7 @@
-package server;
+package com.example.term_project_javafx.server;
 
-import util.Movie;
-import util.SocketWrapper;
+import com.example.term_project_javafx.util.SocketWrapper;
+import com.example.term_project_javafx.util.Movie;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -41,6 +41,7 @@ public class Server {
     private static final String INPUT_FILE_NAME = "movies.txt";
     private static final String OUTPUT_FILE_NAME = "movies.txt";
     public static void main(String args[]) throws IOException {
+        System.out.println("DFSHFDGSHDFGHS");
         List<Movie> movieList = new ArrayList<>();
         HashMap<String, List<Movie>> productionCompanyMap = new HashMap<>();
         List<String> productionCompanyList = new ArrayList<>();

@@ -1,6 +1,8 @@
-package server;
+package com.example.term_project_javafx.server;
 
-import util.*;
+import com.example.term_project_javafx.util.SocketWrapper;
+import com.example.term_project_javafx.util.Movie;
+import com.example.term_project_javafx.util.Message;
 import java.io.IOException;
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package backend;
+package com.example.term_project_javafx.backend;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

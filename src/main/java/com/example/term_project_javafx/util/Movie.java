@@ -1,4 +1,4 @@
-package util;
+package com.example.term_project_javafx.util;
 
 public class Movie {
     private String title, genre1, genre2, genre3, productionCompany;

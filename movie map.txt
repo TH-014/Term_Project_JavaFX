@@ -1,0 +1,898 @@
+o Title: Toy Story
+o Year of Release: 1995
+o Genre: Animation, Comedy, Family
+o Running Time (in minutes): 81
+o Production Company: Pixar Animation Studios
+o Budget: 30000000
+o Revenue: 373554033
+
+
+o Title: Jumanji
+o Year of Release: 1995
+o Genre: Adventure, Fantasy, Family
+o Running Time (in minutes): 104
+o Production Company: TriStar Pictures
+o Budget: 65000000
+o Revenue: 262797249
+
+
+o Title: Basic Instinct
+o Year of Release: 1992
+o Genre: Thriller, Mystery, 
+o Running Time (in minutes): 127
+o Production Company: TriStar Pictures
+o Budget: 49000000
+o Revenue: 352927224
+
+
+o Title: Heat
+o Year of Release: 1995
+o Genre: Action, Crime, Drama
+o Running Time (in minutes): 170
+o Production Company: Regency Enterprises
+o Budget: 60000000
+o Revenue: 187436818
+
+
+o Title: The Client
+o Year of Release: 1994
+o Genre: Drama, Thriller, Crime
+o Running Time (in minutes): 119
+o Production Company: Regency Enterprises
+o Budget: 45000000
+o Revenue: 117615211
+
+
+o Title: Se7en
+o Year of Release: 1995
+o Genre: Crime, Mystery, Thriller
+o Running Time (in minutes): 127
+o Production Company: New Line Cinema
+o Budget: 33000000
+o Revenue: 327311859
+
+
+o Title: The Usual Suspects
+o Year of Release: 1995
+o Genre: Drama, Crime, Thriller
+o Running Time (in minutes): 106
+o Production Company: Blue Parrot Productions
+o Budget: 6000000
+o Revenue: 23341568
+
+
+o Title: Mighty Aphrodite
+o Year of Release: 1995
+o Genre: Comedy, Romance, 
+o Running Time (in minutes): 95
+o Production Company: Miramax Films
+o Budget: 15000000
+o Revenue: 6700000
+
+
+o Title: Pulp Fiction
+o Year of Release: 1994
+o Genre: Thriller, Crime, 
+o Running Time (in minutes): 154
+o Production Company: Miramax Films
+o Budget: 8000000
+o Revenue: 213928762
+
+
+o Title: The Crow
+o Year of Release: 1994
+o Genre: Fantasy, Action, Thriller
+o Running Time (in minutes): 102
+o Production Company: Miramax Films
+o Budget: 15000000
+o Revenue: 94000000
+
+
+o Title: Trainspotting
+o Year of Release: 1996
+o Genre: Drama, Crime, 
+o Running Time (in minutes): 93
+o Production Company: Miramax Films
+o Budget: 4000000
+o Revenue: 16491080
+
+
+o Title: The English Patient
+o Year of Release: 1996
+o Genre: Drama, Romance, War
+o Running Time (in minutes): 162
+o Production Company: Miramax Films
+o Budget: 27000000
+o Revenue: 231976425
+
+
+o Title: Good Will Hunting
+o Year of Release: 1997
+o Genre: Drama, , 
+o Running Time (in minutes): 126
+o Production Company: Miramax Films
+o Budget: 10000000
+o Revenue: 225933435
+
+
+o Title: Jackie Brown
+o Year of Release: 1997
+o Genre: Comedy, Crime, Romance
+o Running Time (in minutes): 154
+o Production Company: Miramax Films
+o Budget: 12000000
+o Revenue: 39673162
+
+
+o Title: From Dusk Till Dawn
+o Year of Release: 1996
+o Genre: Horror, Action, Thriller
+o Running Time (in minutes): 108
+o Production Company: A Band Apart
+o Budget: 19000000
+o Revenue: 25836616
+
+
+o Title: Braveheart
+o Year of Release: 1995
+o Genre: Action, Drama, History
+o Running Time (in minutes): 177
+o Production Company: Icon Entertainment International
+o Budget: 72000000
+o Revenue: 210000000
+
+
+o Title: Apollo 13
+o Year of Release: 1995
+o Genre: Drama, , 
+o Running Time (in minutes): 140
+o Production Company: Imagine Entertainment
+o Budget: 52000000
+o Revenue: 355237933
+
+
+o Title: Die Hard: With a Vengeance
+o Year of Release: 1995
+o Genre: Action, Thriller, 
+o Running Time (in minutes): 128
+o Production Company: Twentieth Century Fox Film Corporation
+o Budget: 90000000
+o Revenue: 366101666
+
+
+o Title: Independence Day
+o Year of Release: 1996
+o Genre: Action, Adventure, Science Fiction
+o Running Time (in minutes): 145
+o Production Company: Twentieth Century Fox Film Corporation
+o Budget: 75000000
+o Revenue: 816969268
+
+
+o Title: Chain Reaction
+o Year of Release: 1996
+o Genre: Action, Drama, Science Fiction
+o Running Time (in minutes): 107
+o Production Company: Twentieth Century Fox Film Corporation
+o Budget: 50000000
+o Revenue: 60209334
+
+
+o Title: Die Hard
+o Year of Release: 1988
+o Genre: Action, Thriller, 
+o Running Time (in minutes): 131
+o Production Company: Twentieth Century Fox Film Corporation
+o Budget: 28000000
+o Revenue: 140767956
+
+
+o Title: Aliens
+o Year of Release: 1986
+o Genre: Horror, Action, Thriller
+o Running Time (in minutes): 137
+o Production Company: Twentieth Century Fox Film Corporation
+o Budget: 18500000
+o Revenue: 183316455
+
+
+o Title: Alien
+o Year of Release: 1979
+o Genre: Horror, Action, Thriller
+o Running Time (in minutes): 117
+o Production Company: Twentieth Century Fox Film Corporation
+o Budget: 11000000
+o Revenue: 104931801
+
+
+o Title: Alien3
+o Year of Release: 1992
+o Genre: Science Fiction, Action, Horror
+o Running Time (in minutes): 114
+o Production Company: Twentieth Century Fox Film Corporation
+o Budget: 50000000
+o Revenue: 159773545
+
+
+o Title: The Omen
+o Year of Release: 1976
+o Genre: Horror, Thriller, 
+o Running Time (in minutes): 111
+o Production Company: Twentieth Century Fox Film Corporation
+o Budget: 2800000
+o Revenue: 60922980
+
+
+o Title: Die Hard 2
+o Year of Release: 1990
+o Genre: Action, Thriller, 
+o Running Time (in minutes): 124
+o Production Company: Twentieth Century Fox Film Corporation
+o Budget: 70000000
+o Revenue: 240031094
+
+
+o Title: Alien: Resurrection
+o Year of Release: 1997
+o Genre: Science Fiction, Horror, Action
+o Running Time (in minutes): 109
+o Production Company: Twentieth Century Fox Film Corporation
+o Budget: 70000000
+o Revenue: 162000000
+
+
+o Title: First Knight
+o Year of Release: 1995
+o Genre: Action, Adventure, Drama
+o Running Time (in minutes): 134
+o Production Company: Columbia Pictures
+o Budget: 55000000
+o Revenue: 127600435
+
+
+o Title: On the Waterfront
+o Year of Release: 1954
+o Genre: Crime, Drama, 
+o Running Time (in minutes): 108
+o Production Company: Columbia Pictures
+o Budget: 910000
+o Revenue: 9600000
+
+
+o Title: Stand by Me
+o Year of Release: 1986
+o Genre: Crime, Drama, 
+o Running Time (in minutes): 89
+o Production Company: Columbia Pictures
+o Budget: 8000000
+o Revenue: 52287414
+
+
+o Title: The Fifth Element
+o Year of Release: 1997
+o Genre: Adventure, Fantasy, Action
+o Running Time (in minutes): 126
+o Production Company: Columbia Pictures
+o Budget: 90000000
+o Revenue: 263920180
+
+
+o Title: Showgirls
+o Year of Release: 1995
+o Genre: Drama, , 
+o Running Time (in minutes): 128
+o Production Company: United Artists
+o Budget: 45000000
+o Revenue: 20350754
+
+
+o Title: One Flew Over the Cuckoo's Nest
+o Year of Release: 1975
+o Genre: Drama, , 
+o Running Time (in minutes): 133
+o Production Company: United Artists
+o Budget: 3000000
+o Revenue: 108981275
+
+
+o Title: 12 Angry Men
+o Year of Release: 1957
+o Genre: Drama, , 
+o Running Time (in minutes): 96
+o Production Company: United Artists
+o Budget: 350000
+o Revenue: 1000000
+
+
+o Title: Annie Hall
+o Year of Release: 1977
+o Genre: Comedy, Drama, Romance
+o Running Time (in minutes): 93
+o Production Company: United Artists
+o Budget: 4000000
+o Revenue: 38251425
+
+
+o Title: High Noon
+o Year of Release: 1952
+o Genre: Western, , 
+o Running Time (in minutes): 85
+o Production Company: United Artists
+o Budget: 730000
+o Revenue: 8000000
+
+
+o Title: Child's Play
+o Year of Release: 1988
+o Genre: Horror, Thriller, 
+o Running Time (in minutes): 87
+o Production Company: United Artists
+o Budget: 9000000
+o Revenue: 44196684
+
+
+o Title: Waterworld
+o Year of Release: 1995
+o Genre: Adventure, Action, 
+o Running Time (in minutes): 135
+o Production Company: Universal Pictures
+o Budget: 175000000
+o Revenue: 264218220
+
+
+o Title: The Flintstones
+o Year of Release: 1994
+o Genre: Fantasy, Comedy, Family
+o Running Time (in minutes): 91
+o Production Company: Universal Pictures
+o Budget: 46000000
+o Revenue: 341631208
+
+
+o Title: Schindler's List
+o Year of Release: 1993
+o Genre: Drama, History, War
+o Running Time (in minutes): 195
+o Production Company: Universal Pictures
+o Budget: 22000000
+o Revenue: 321365567
+
+
+o Title: DragonHeart
+o Year of Release: 1996
+o Genre: Fantasy, , 
+o Running Time (in minutes): 103
+o Production Company: Universal Pictures
+o Budget: 57000000
+o Revenue: 115267375
+
+
+o Title: E.T. the Extra-Terrestrial
+o Year of Release: 1982
+o Genre: Science Fiction, Adventure, Family
+o Running Time (in minutes): 115
+o Production Company: Universal Pictures
+o Budget: 10500000
+o Revenue: 792965326
+
+
+o Title: Back to the Future
+o Year of Release: 1985
+o Genre: Adventure, Comedy, Science Fiction
+o Running Time (in minutes): 116
+o Production Company: Universal Pictures
+o Budget: 19000000
+o Revenue: 381109762
+
+
+o Title: Jaws
+o Year of Release: 1975
+o Genre: Horror, Thriller, Adventure
+o Running Time (in minutes): 124
+o Production Company: Universal Pictures
+o Budget: 7000000
+o Revenue: 470654000
+
+
+o Title: Jaws 3-D
+o Year of Release: 1983
+o Genre: Thriller, Horror, 
+o Running Time (in minutes): 99
+o Production Company: Universal Pictures
+o Budget: 20500000
+o Revenue: 87987055
+
+
+o Title: Child's Play 3
+o Year of Release: 1991
+o Genre: Thriller, Horror, Action
+o Running Time (in minutes): 90
+o Production Company: Universal Pictures
+o Budget: 13000000
+o Revenue: 20560255
+
+
+o Title: Star Wars
+o Year of Release: 1977
+o Genre: Adventure, Action, Science Fiction
+o Running Time (in minutes): 121
+o Production Company: Lucasfilm
+o Budget: 11000000
+o Revenue: 775398007
+
+
+o Title: The Empire Strikes Back
+o Year of Release: 1980
+o Genre: Adventure, Action, Science Fiction
+o Running Time (in minutes): 124
+o Production Company: Lucasfilm
+o Budget: 18000000
+o Revenue: 538400000
+
+
+o Title: Raiders of the Lost Ark
+o Year of Release: 1981
+o Genre: Adventure, Action, 
+o Running Time (in minutes): 115
+o Production Company: Lucasfilm
+o Budget: 18000000
+o Revenue: 389925971
+
+
+o Title: The Shawshank Redemption
+o Year of Release: 1994
+o Genre: Drama, Crime, 
+o Running Time (in minutes): 142
+o Production Company: Castle Rock Entertainment
+o Budget: 25000000
+o Revenue: 28341469
+
+
+o Title: While You Were Sleeping
+o Year of Release: 1995
+o Genre: Comedy, Drama, Romance
+o Running Time (in minutes): 103
+o Production Company: Caravan Pictures
+o Budget: 17000000
+o Revenue: 182057016
+
+
+o Title: Six Days Seven Nights
+o Year of Release: 1998
+o Genre: Action, Adventure, Comedy
+o Running Time (in minutes): 98
+o Production Company: Caravan Pictures
+o Budget: 70000000
+o Revenue: 164000000
+
+
+o Title: Forrest Gump
+o Year of Release: 1994
+o Genre: Comedy, Drama, Romance
+o Running Time (in minutes): 142
+o Production Company: Paramount Pictures
+o Budget: 55000000
+o Revenue: 677945399
+
+
+o Title: Mission: Impossible
+o Year of Release: 1996
+o Genre: Adventure, Action, Thriller
+o Running Time (in minutes): 110
+o Production Company: Paramount Pictures
+o Budget: 80000000
+o Revenue: 457696359
+
+
+o Title: The Godfather
+o Year of Release: 1972
+o Genre: Drama, Crime, 
+o Running Time (in minutes): 175
+o Production Company: Paramount Pictures
+o Budget: 6000000
+o Revenue: 245066411
+
+
+o Title: Vertigo
+o Year of Release: 1958
+o Genre: Mystery, Romance, Thriller
+o Running Time (in minutes): 128
+o Production Company: Paramount Pictures
+o Budget: 2479000
+o Revenue: 28000000
+
+
+o Title: Rear Window
+o Year of Release: 1954
+o Genre: Drama, Mystery, Thriller
+o Running Time (in minutes): 112
+o Production Company: Paramount Pictures
+o Budget: 1000000
+o Revenue: 36764313
+
+
+o Title: Top Gun
+o Year of Release: 1986
+o Genre: Action, Romance, War
+o Running Time (in minutes): 110
+o Production Company: Paramount Pictures
+o Budget: 15000000
+o Revenue: 356830601
+
+
+o Title: Psycho
+o Year of Release: 1960
+o Genre: Drama, Horror, Thriller
+o Running Time (in minutes): 109
+o Production Company: Paramount Pictures
+o Budget: 806948
+o Revenue: 32000000
+
+
+o Title: The Godfather: Part II
+o Year of Release: 1974
+o Genre: Drama, Crime, 
+o Running Time (in minutes): 200
+o Production Company: Paramount Pictures
+o Budget: 13000000
+o Revenue: 47542841
+
+
+o Title: The Hunt for Red October
+o Year of Release: 1990
+o Genre: Action, Adventure, Thriller
+o Running Time (in minutes): 134
+o Production Company: Paramount Pictures
+o Budget: 30000000
+o Revenue: 199200000
+
+
+o Title: Titanic
+o Year of Release: 1997
+o Genre: Drama, Romance, Thriller
+o Running Time (in minutes): 194
+o Production Company: Paramount Pictures
+o Budget: 200000000
+o Revenue: 1845034188
+
+
+o Title: The Godfather: Part III
+o Year of Release: 1990
+o Genre: Crime, Drama, Thriller
+o Running Time (in minutes): 162
+o Production Company: Paramount Pictures
+o Budget: 54000000
+o Revenue: 136766062
+
+
+o Title: Saving Private Ryan
+o Year of Release: 1998
+o Genre: Drama, History, War
+o Running Time (in minutes): 169
+o Production Company: Paramount Pictures
+o Budget: 70000000
+o Revenue: 481840909
+
+
+o Title: The Lion King
+o Year of Release: 1994
+o Genre: Family, Animation, Drama
+o Running Time (in minutes): 89
+o Production Company: Walt Disney Pictures
+o Budget: 45000000
+o Revenue: 788241776
+
+
+o Title: Aladdin
+o Year of Release: 1992
+o Genre: Animation, Family, Comedy
+o Running Time (in minutes): 90
+o Production Company: Walt Disney Pictures
+o Budget: 28000000
+o Revenue: 504050219
+
+
+o Title: Beauty and the Beast
+o Year of Release: 1991
+o Genre: Romance, Family, Animation
+o Running Time (in minutes): 84
+o Production Company: Walt Disney Pictures
+o Budget: 25000000
+o Revenue: 377350553
+
+
+o Title: Mulan
+o Year of Release: 1998
+o Genre: Animation, Family, Adventure
+o Running Time (in minutes): 88
+o Production Company: Walt Disney Pictures
+o Budget: 90000000
+o Revenue: 304320254
+
+
+o Title: The Jungle Book
+o Year of Release: 1967
+o Genre: Family, Animation, Adventure
+o Running Time (in minutes): 78
+o Production Company: Walt Disney Pictures
+o Budget: 4000000
+o Revenue: 205843612
+
+
+o Title: The Little Mermaid
+o Year of Release: 1989
+o Genre: Animation, Family, 
+o Running Time (in minutes): 83
+o Production Company: Walt Disney Pictures
+o Budget: 40000000
+o Revenue: 222300000
+
+
+o Title: Robin Hood: Men in Tights
+o Year of Release: 1993
+o Genre: Comedy, , 
+o Running Time (in minutes): 104
+o Production Company: Gaumont
+o Budget: 20000000
+o Revenue: 35739755
+
+
+o Title: Blade Runner
+o Year of Release: 1982
+o Genre: Science Fiction, Drama, Thriller
+o Running Time (in minutes): 117
+o Production Company: Shaw Brothers
+o Budget: 28000000
+o Revenue: 33139618
+
+
+o Title: The Nightmare Before Christmas
+o Year of Release: 1993
+o Genre: Fantasy, Animation, Family
+o Running Time (in minutes): 76
+o Production Company: Tim Burton Productions
+o Budget: 18000000
+o Revenue: 75634409
+
+
+o Title: Mars Attacks!
+o Year of Release: 1996
+o Genre: Comedy, Fantasy, Science Fiction
+o Running Time (in minutes): 106
+o Production Company: Tim Burton Productions
+o Budget: 70000000
+o Revenue: 101371017
+
+
+o Title: True Romance
+o Year of Release: 1993
+o Genre: Action, Thriller, Crime
+o Running Time (in minutes): 120
+o Production Company: Davis-Films
+o Budget: 12500000
+o Revenue: 12281551
+
+
+o Title: Terminator 2: Judgment Day
+o Year of Release: 1991
+o Genre: Action, Thriller, Science Fiction
+o Running Time (in minutes): 137
+o Production Company: Lightstorm Entertainment
+o Budget: 100000000
+o Revenue: 520000000
+
+
+o Title: Batman
+o Year of Release: 1989
+o Genre: Fantasy, Action, 
+o Running Time (in minutes): 126
+o Production Company: PolyGram Filmed Entertainment
+o Budget: 35000000
+o Revenue: 411348924
+
+
+o Title: Batman Returns
+o Year of Release: 1992
+o Genre: Action, Fantasy, 
+o Running Time (in minutes): 126
+o Production Company: PolyGram Filmed Entertainment
+o Budget: 80000000
+o Revenue: 280000000
+
+
+o Title: Batman & Robin
+o Year of Release: 1997
+o Genre: Action, Crime, Fantasy
+o Running Time (in minutes): 125
+o Production Company: PolyGram Filmed Entertainment
+o Budget: 125000000
+o Revenue: 238207122
+
+
+o Title: Snow White and the Seven Dwarfs
+o Year of Release: 1937
+o Genre: Fantasy, Animation, Family
+o Running Time (in minutes): 83
+o Production Company: Walt Disney Productions
+o Budget: 1488423
+o Revenue: 184925486
+
+
+o Title: Mary Poppins
+o Year of Release: 1964
+o Genre: Comedy, Family, Fantasy
+o Running Time (in minutes): 139
+o Production Company: Walt Disney Productions
+o Budget: 6000000
+o Revenue: 102272727
+
+
+o Title: The Wizard of Oz
+o Year of Release: 1939
+o Genre: Adventure, Family, Fantasy
+o Running Time (in minutes): 102
+o Production Company: 
+o Budget: 2777000
+o Revenue: 33754967
+
+
+o Title: Citizen Kane
+o Year of Release: 1941
+o Genre: Mystery, Drama, 
+o Running Time (in minutes): 119
+o Production Company: RKO Radio Pictures
+o Budget: 839727
+o Revenue: 23217674
+
+
+o Title: It's a Wonderful Life
+o Year of Release: 1946
+o Genre: Drama, Family, Fantasy
+o Running Time (in minutes): 130
+o Production Company: RKO Radio Pictures
+o Budget: 3180000
+o Revenue: 9644124
+
+
+o Title: Alice in Wonderland
+o Year of Release: 1951
+o Genre: Animation, Adventure, Family
+o Running Time (in minutes): 75
+o Production Company: RKO Radio Pictures
+o Budget: 3000000
+o Revenue: 572000000
+
+
+o Title: 2001: A Space Odyssey
+o Year of Release: 1968
+o Genre: Science Fiction, Mystery, Adventure
+o Running Time (in minutes): 149
+o Production Company: Stanley Kubrick Productions
+o Budget: 10500000
+o Revenue: 68700000
+
+
+o Title: Platoon
+o Year of Release: 1986
+o Genre: Drama, War, Action
+o Running Time (in minutes): 120
+o Production Company: Orion Pictures
+o Budget: 6000000
+o Revenue: 138530565
+
+
+o Title: The Terminator
+o Year of Release: 1984
+o Genre: Action, Thriller, Science Fiction
+o Running Time (in minutes): 108
+o Production Company: Orion Pictures
+o Budget: 6400000
+o Revenue: 78371200
+
+
+o Title: Sophie's Choice
+o Year of Release: 1982
+o Genre: Drama, Romance, 
+o Running Time (in minutes): 151
+o Production Company: Keith Barish Productions
+o Budget: 12000000
+o Revenue: 30036000
+
+
+o Title: The Princess Bride
+o Year of Release: 1987
+o Genre: Adventure, Family, Fantasy
+o Running Time (in minutes): 98
+o Production Company: Act III Communications
+o Budget: 16000000
+o Revenue: 30857814
+
+
+o Title: A Clockwork Orange
+o Year of Release: 1971
+o Genre: Science Fiction, Drama, 
+o Running Time (in minutes): 136
+o Production Company: Hawk Films
+o Budget: 2200000
+o Revenue: 26589000
+
+
+o Title: The Shining
+o Year of Release: 1980
+o Genre: Horror, Thriller, 
+o Running Time (in minutes): 144
+o Production Company: Hawk Films
+o Budget: 19000000
+o Revenue: 44017374
+
+
+o Title: GoodFellas
+o Year of Release: 1990
+o Genre: Drama, Crime, 
+o Running Time (in minutes): 145
+o Production Company: Winkler Films
+o Budget: 25000000
+o Revenue: 46836394
+
+
+o Title: Dead Poets Society
+o Year of Release: 1989
+o Genre: Drama, , 
+o Running Time (in minutes): 129
+o Production Company: Touchstone Pictures
+o Budget: 16400000
+o Revenue: 235860116
+
+
+o Title: Highlander
+o Year of Release: 1986
+o Genre: Adventure, Action, Fantasy
+o Running Time (in minutes): 116
+o Production Company: Davis-Panzer Productions
+o Budget: 16000000
+o Revenue: 5900000
+
+
+o Title: Dracula
+o Year of Release: 1992
+o Genre: Romance, Horror, 
+o Running Time (in minutes): 128
+o Production Company: American Zoetrope
+o Budget: 40000000
+o Revenue: 215862692
+
+
+o Title: The Last of the Mohicans
+o Year of Release: 1992
+o Genre: Action, Adventure, Drama
+o Running Time (in minutes): 112
+o Production Company: Morgan Creek Productions
+o Budget: 40000000
+o Revenue: 75505856
+
+
+o Title: Men in Black
+o Year of Release: 1997
+o Genre: Action, Adventure, Comedy
+o Running Time (in minutes): 98
+o Production Company: Amblin Entertainment
+o Budget: 90000000
+o Revenue: 589390539
+
+
+o Title: Tomorrow Never Dies
+o Year of Release: 1997
+o Genre: Adventure, Action, Thriller
+o Running Time (in minutes): 119
+o Production Company: Eon Productions
+o Budget: 110000000
+o Revenue: 333011068
+
+
+o Title: The Big Lebowski
+o Year of Release: 1998
+o Genre: Comedy, Crime, 
+o Running Time (in minutes): 117
+o Production Company: Gramercy Pictures
+o Budget: 15000000
+o Revenue: 46189568
