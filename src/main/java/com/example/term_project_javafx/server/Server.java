@@ -14,7 +14,9 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Server {
-
+    public static List<Movie> movieList;
+    public static HashMap<String, List<Movie>> productionCompanyMap;
+    public static List<String> productionCompanyList;
     private ServerSocket serverSocket;
     public HashMap<String, SocketWrapper> clientMap;
 
@@ -41,10 +43,10 @@ public class Server {
     private static final String INPUT_FILE_NAME = "movies.txt";
     private static final String OUTPUT_FILE_NAME = "movies.txt";
     public static void main(String args[]) throws IOException {
-        System.out.println("DFSHFDGSHDFGHS");
-        List<Movie> movieList = new ArrayList<>();
-        HashMap<String, List<Movie>> productionCompanyMap = new HashMap<>();
-        List<String> productionCompanyList = new ArrayList<>();
+        System.out.println("Server Started...");
+        movieList = new ArrayList<>();
+        productionCompanyMap = new HashMap<>();
+        productionCompanyList = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(INPUT_FILE_NAME));
 
         while (true) {
@@ -61,13 +63,14 @@ public class Server {
             mvList.add(mv);
             productionCompanyMap.put(mv.getProductionCompany(), mvList);
         }
-        for(int i=0;i<productionCompanyList.size(); i++)
-        {
-            for(int j=0; j<productionCompanyMap.get(productionCompanyList.get(i)).size();j++)
-            {
-                productionCompanyMap.get(productionCompanyList.get(i)).get(j).showMovie();
-            }
-        }
+//        for(int i=0;i<productionCompanyList.size(); i++)
+//        {
+//            for(int j=0; j<productionCompanyMap.get(productionCompanyList.get(i)).size();j++)
+//            {
+//                productionCompanyMap.get(productionCompanyList.get(i)).get(j).showMovie();
+//            }
+//        }
+        System.out.println("Movie loading complete...");
         br.close();
         new Server();
     }
