@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
+import com.example.term_project_javafx.util.Movie;
+import com.example.term_project_javafx.util.pCompany;
 
 public class projectMain {
     private static final String INPUT_FILE_NAME = "movies.txt";
@@ -312,7 +314,7 @@ class projectOperation
             pcin=-1;
             for(int k=0; k<pCompanyList.size(); k++)
             {
-                if(movieList.get(i).getProductionCompany().equalsIgnoreCase(pCompanyList.get(k).name))
+                if(movieList.get(i).getProductionCompany().equalsIgnoreCase(pCompanyList.get(k).getName()))
                 {
                     pcin=k;
                     break;
@@ -320,13 +322,13 @@ class projectOperation
             }
             if(pcin>-1)
             {
-                pCompanyList.get(pcin).mCount++;
+                pCompanyList.get(pcin).setmCount(pCompanyList.get(pcin).getmCount()+1);
             }
             else
             {
                 pCompany pc = new pCompany();
-                pc.name = movieList.get(i).getProductionCompany();
-                pc.mCount=1;
+                pc.setName(movieList.get(i).getProductionCompany());
+                pc.setmCount(1);
                 pCompanyList.add(pc);
             }
         }

@@ -1,6 +1,8 @@
 package com.example.term_project_javafx.util;
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable {
     private String title, genre1, genre2, genre3, productionCompany;
     private int year, time, budget, revenue, profit;
     public Movie(String line)
@@ -109,16 +111,3 @@ public class Movie {
     }
 }
 
-class pCompany{
-    String name;
-    int mCount;
-    pCompany()
-    {
-        name="";
-        mCount=0;
-    }
-    public void showCompany()
-    {
-        System.out.println("o Production Company: " + name + ".   Movie count: "+mCount+"\n");
-    }
-}
