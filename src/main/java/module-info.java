@@ -8,4 +8,6 @@ module com.example.term_project_javafx {
 
     opens com.example.term_project_javafx to javafx.fxml;
     exports com.example.term_project_javafx;
+    exports com.example.term_project_javafx.client;
+    opens com.example.term_project_javafx.client to javafx.fxml;
 }
