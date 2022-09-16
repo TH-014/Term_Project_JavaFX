@@ -2,6 +2,8 @@ package com.example.term_project_javafx.client;
 
 import javafx.event.ActionEvent;
 
+import java.io.IOException;
+
 public class HomePageController {
     private Client client;
 
@@ -13,7 +15,10 @@ public class HomePageController {
         this.client = client;
     }
 
-    public void onMyMoviesClick(ActionEvent actionEvent) {
+    public void onMyMoviesClick(ActionEvent actionEvent) throws IOException {
+        client.showMyMoviePage();
+//        MyMoviesController myMovCon = new MyMoviesController();
+//        myMovCon.addInfo();
     }
 
     public void onMostRecentClick(ActionEvent actionEvent) {

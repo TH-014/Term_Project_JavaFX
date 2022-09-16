@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.term_project_javafx.client.AddMovieController">
    <children>
       <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="874.0" text="Add Movie" textAlignment="CENTER">
@@ -29,12 +28,12 @@
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="genre2Box" layoutX="48.0" layoutY="231.0" prefHeight="40.0" prefWidth="824.0" promptText="Enter Genre (2)">
+      <TextField fx:id="genre2Box" layoutX="48.0" layoutY="231.0" prefHeight="40.0" prefWidth="824.0" promptText="Enter Genre (2) (Optional)">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="genre3Box" layoutX="48.0" layoutY="288.0" prefHeight="40.0" prefWidth="824.0" promptText="Enter Genre(3)">
+      <TextField fx:id="genre3Box" layoutX="48.0" layoutY="288.0" prefHeight="40.0" prefWidth="824.0" promptText="Enter Genre (3) (Optional)">
          <font>
             <Font size="18.0" />
          </font>
@@ -44,7 +43,7 @@
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="budgetBox" layoutX="48.0" layoutY="401.0" prefHeight="40.0" prefWidth="824.0" promptText="Enter Movie Btdget">
+      <TextField fx:id="budgetBox" layoutX="48.0" layoutY="401.0" prefHeight="40.0" prefWidth="824.0" promptText="Enter Movie Budget">
          <font>
             <Font size="18.0" />
          </font>

@@ -64,7 +64,8 @@ public class LoginPageController {
             //Login Completed...
         } catch (Exception e) {
             System.out.println(e);
-        } finally {
+        }
+        finally {
             try {
                 client.getSocketWrapper().closeConnection();
             } catch (IOException e) {

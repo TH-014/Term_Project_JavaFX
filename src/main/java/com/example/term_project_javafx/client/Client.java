@@ -41,7 +41,6 @@ public class Client extends Application {
     }
 
     public void showLoginPage() throws IOException {
-        myMovieList = LoginPageController.myMovieList;
         // XML Loading using FXMLLoader
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login-page.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 600);
@@ -58,6 +57,7 @@ public class Client extends Application {
     public void showHomePage() throws Exception {
 
 //        System.out.println("Test 1");
+        myMovieList = LoginPageController.myMovieList;
         FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("home-page.fxml"));
 //        System.out.println("Test 2");
         //loader.setLocation(getClass().getResource("home-page.fxml"));
@@ -86,6 +86,22 @@ public class Client extends Application {
         alert.setHeaderText("Incorrect Credentials");
         alert.setContentText("The username and password you provided is not correct.");
         alert.showAndWait();
+    }
+
+    public void showMyMoviePage() throws IOException {
+        //MyMoviesController.myMovieList = myMovieList;
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("my-movies.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+
+        // Loading the controller
+        MyMoviesController controller = fxmlLoader.getController();
+        controller.setClient(this);
+        controller.addInfo();
+
+        // Set the primary stage
+        stage.setTitle("Movie Database: My Movies");
+        stage.setScene(scene);
+        stage.show();
     }
 }
 

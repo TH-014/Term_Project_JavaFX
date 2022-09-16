@@ -10,5 +10,6 @@ module com.example.term_project_javafx {
     exports com.example.term_project_javafx;
     exports com.example.term_project_javafx.client;
     exports com.example.term_project_javafx.util;
+    exports com.example.term_project_javafx.backend;
     opens com.example.term_project_javafx.client to javafx.fxml;
 }
