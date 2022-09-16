@@ -220,7 +220,7 @@ public class projectOperation {
         return prefList;
     }
 
-    static long pcsProfit(String pcname) {
+    public static long pcsProfit(String pcname) {
         long prof = 0;
         for (int i = 0; i < movieList.size(); i++) {
             if (movieList.get(i).getProductionCompany().equalsIgnoreCase(pcname)) {

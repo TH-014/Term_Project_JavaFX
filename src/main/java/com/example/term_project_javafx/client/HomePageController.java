@@ -29,7 +29,8 @@ public class HomePageController {
         client.showMaxRevenuePage();
     }
 
-    public void onProfitClick(ActionEvent actionEvent) {
+    public void onProfitClick(ActionEvent actionEvent) throws IOException {
+        client.showProfit();
     }
 
     public void onAddMovieClick(ActionEvent actionEvent) {

@@ -136,6 +136,22 @@ public class Client extends Application {
         stage.setScene(scene);
         stage.show();
     }
+    public void showProfit() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("total-profit.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        projectOperation.movieList = myMovieList;
+        long profit;
+        profit = projectOperation.pcsProfit(myMovieList.get(0).getProductionCompany());
+        // Loading the controller
+        TotalProfitController controller = fxmlLoader.getController();
+        TotalProfitController.setClient(this);
+        controller.setProfit(profit);
+
+        // Set the primary stage
+        stage.setTitle("Movie Database: My Movies");
+        stage.setScene(scene);
+        stage.show();
+    }
 }
 
 
