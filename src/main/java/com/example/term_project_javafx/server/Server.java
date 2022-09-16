@@ -2,6 +2,7 @@ package com.example.term_project_javafx.server;
 
 import com.example.term_project_javafx.util.SocketWrapper;
 import com.example.term_project_javafx.util.Movie;
+import com.example.term_project_javafx.util.LoginDTO;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -14,13 +15,15 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Server {
-    public static List<Movie> movieList;
-    public static HashMap<String, List<Movie>> productionCompanyMap;
-    public static List<String> productionCompanyList;
+    public List<Movie> movieList;
+    public HashMap<String, List<Movie>> productionCompanyMap;
+    public HashMap<String, String> credentialsMap;
+    public List<String> productionCompanyList;
     private ServerSocket serverSocket;
     public HashMap<String, SocketWrapper> clientMap;
 
-    Server() {
+    Server() throws IOException {
+        readFiles();
         clientMap = new HashMap<>();
         try {
             serverSocket = new ServerSocket(33333);
@@ -35,17 +38,17 @@ public class Server {
 
     public void serve(Socket clientSocket) throws IOException, ClassNotFoundException {
         SocketWrapper socketWrapper = new SocketWrapper(clientSocket);
-        String clientName = (String) socketWrapper.read();
-        clientMap.put(clientName, socketWrapper);
-        new ReadThreadServer(clientMap, socketWrapper);
+        new ReadThreadServer(clientMap, productionCompanyMap, credentialsMap, productionCompanyList, socketWrapper);
     }
 
     private static final String INPUT_FILE_NAME = "movies.txt";
+    private static final String CREDENTIALS_INPUT = "credentials.txt";
     private static final String OUTPUT_FILE_NAME = "movies.txt";
-    public static void main(String args[]) throws IOException {
-        System.out.println("Server Started...");
+
+    public void readFiles() throws IOException {
         movieList = new ArrayList<>();
         productionCompanyMap = new HashMap<>();
+        credentialsMap = new HashMap<>();
         productionCompanyList = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(INPUT_FILE_NAME));
 
@@ -63,6 +66,15 @@ public class Server {
             mvList.add(mv);
             productionCompanyMap.put(mv.getProductionCompany(), mvList);
         }
+        System.out.println("Movie loading complete...");
+        BufferedReader cr = new BufferedReader(new FileReader(CREDENTIALS_INPUT));
+        while (true) {
+            String line = cr.readLine();
+            if (line == null) break;
+            String[] str = line.split(",");
+            credentialsMap.put(str[0],str[1]);
+        }
+        System.out.println("Credentials Loading Complete...");
 //        for(int i=0;i<productionCompanyList.size(); i++)
 //        {
 //            for(int j=0; j<productionCompanyMap.get(productionCompanyList.get(i)).size();j++)
@@ -70,8 +82,10 @@ public class Server {
 //                productionCompanyMap.get(productionCompanyList.get(i)).get(j).showMovie();
 //            }
 //        }
-        System.out.println("Movie loading complete...");
         br.close();
+    }
+    public static void main(String args[]) throws IOException {
+        System.out.println("Server Started...");
         new Server();
     }
 }

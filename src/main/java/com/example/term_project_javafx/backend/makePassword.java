@@ -1,5 +1,7 @@
 package com.example.term_project_javafx.backend;
 
+import com.example.term_project_javafx.util.Movie;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
