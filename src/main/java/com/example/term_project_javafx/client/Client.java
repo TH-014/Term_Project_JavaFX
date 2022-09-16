@@ -54,27 +54,27 @@ public class Client extends Application {
     }
     public void showHomePage() throws Exception {
 
-        System.out.println("Test 1");
+//        System.out.println("Test 1");
         FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("home-page.fxml"));
-        System.out.println("Test 2");
+//        System.out.println("Test 2");
         //loader.setLocation(getClass().getResource("home-page.fxml"));
-        System.out.println("Test 3");
+//        System.out.println("Test 3");
         Parent root = loader.load();//illegal state exception
-        System.out.println("Test 4");
+//        System.out.println("Test 4");
 
         // Loading the controller
         HomePageController controller = loader.getController();
-        System.out.println("Test 5");
+//        System.out.println("Test 5");
         controller.setClient(this);
-        System.out.println("Test 6");
+//        System.out.println("Test 6");
 
         // Set the primary stage
         stage.setTitle("Movie Database: Home Page");
-        System.out.println("Test 7");
+//        System.out.println("Test 7");
         stage.setScene(new Scene(root, 900, 600));
-        System.out.println("Test 8");
+//        System.out.println("Test 8");
         stage.show();
-        System.out.println("Test 9");
+//        System.out.println("Test 9");
     }
 
     public void showAlert() {

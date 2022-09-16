@@ -20,7 +20,7 @@ public class LoginPageController {
     @FXML
     private Button resetButton;
 
-    public void onLoginClick(ActionEvent actionEvent) throws Exception {
+    public void onLoginClick(ActionEvent actionEvent) {
         String name = productionCompany.getText();
         String password = passwordBox.getText();
         System.out.println(name);
