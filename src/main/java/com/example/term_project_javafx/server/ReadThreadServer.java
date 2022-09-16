@@ -29,7 +29,7 @@ public class ReadThreadServer implements Runnable {
 
     public void run() {
         try {
-            while (true) {
+//            while (true) {
                 Object o = socketWrapper.read();
                 if (o != null) {
                     if (o instanceof LoginDTO) {
@@ -43,17 +43,21 @@ public class ReadThreadServer implements Runnable {
                         }
                     }
                 }
-            }
+//            }
         } catch (Exception e) {
             System.out.println(e);
-        } finally {
-            try {
-                socketWrapper.closeConnection();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
-        while (true){}
+//        finally {
+//            try {
+//                socketWrapper.closeConnection();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+        System.out.println("Waiting for next Command...");
+        while (true){
+
+        }
     }
 }
 
