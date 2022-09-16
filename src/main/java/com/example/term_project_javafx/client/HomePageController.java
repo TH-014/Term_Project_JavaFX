@@ -32,5 +32,6 @@ public class HomePageController {
     }
 
     public void onExitClick(ActionEvent actionEvent) {
+        System.exit(0);
     }
 }

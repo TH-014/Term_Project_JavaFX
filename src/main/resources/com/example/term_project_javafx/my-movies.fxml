@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.term_project_javafx.client.MyMoviesController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.term_project_javafx.client.MyMoviesController">
+   <children>
+      <TableView layoutX="14.0" layoutY="60.0" prefHeight="465.0" prefWidth="870.0">
+        <columns>
+          <TableColumn fx:id="titleCol" prefWidth="220.0" text="Title" />
+          <TableColumn fx:id="yearCol" prefWidth="90.0" text="Releasing Year" />
+            <TableColumn fx:id="gen1Col" prefWidth="90.0" text="Genre 1" />
+            <TableColumn fx:id="gen2Col" prefWidth="90.0" text="Genre 2" />
+            <TableColumn fx:id="gen3Col" prefWidth="90.0" text="Genre 3" />
+            <TableColumn fx:id="lengthCol" prefWidth="90.0" text="Length (min)" />
+            <TableColumn fx:id="budgetCol" prefWidth="100.0" text="Budget" />
+            <TableColumn fx:id="revenueCol" prefWidth="100.0" text="Revenue" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="874.0" text="Movie List" textAlignment="CENTER" textFill="#430dd9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="420.0" layoutY="539.0" mnemonicParsing="false" onAction="#onBackClick" text="Back">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

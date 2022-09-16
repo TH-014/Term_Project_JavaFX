@@ -13,11 +13,13 @@ import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Client extends Application {
     private Stage stage;
     private SocketWrapper socketWrapper;
+    public  List<Movie> myMovieList;
 
     public SocketWrapper getSocketWrapper() {
         return socketWrapper;
@@ -39,6 +41,7 @@ public class Client extends Application {
     }
 
     public void showLoginPage() throws IOException {
+        myMovieList = LoginPageController.myMovieList;
         // XML Loading using FXMLLoader
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login-page.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 600);

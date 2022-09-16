@@ -37,6 +37,10 @@ public class ReadThreadServer implements Runnable {
                         String password = credentialsMap.get(loginDTO.getUserName());
                         loginDTO.setStatus(loginDTO.getPassword().equals(password));
                         socketWrapper.write(loginDTO);
+                        if(loginDTO.isStatus())
+                        {
+                            socketWrapper.write(productionCompanyMap.get(loginDTO.getUserName()));
+                        }
                     }
                 }
             }

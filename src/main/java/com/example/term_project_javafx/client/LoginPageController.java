@@ -1,5 +1,6 @@
 package com.example.term_project_javafx.client;
 
+import com.example.term_project_javafx.util.Movie;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -8,6 +9,7 @@ import javafx.scene.control.TextField;
 import com.example.term_project_javafx.util.LoginDTO;
 
 import java.io.IOException;
+import java.util.List;
 
 public class LoginPageController {
     public Client client;
@@ -15,6 +17,7 @@ public class LoginPageController {
     public TextField productionCompany;
     @FXML
     public PasswordField passwordBox;
+    public static List<Movie> myMovieList;
     @FXML
     private Button loginButton;
     @FXML
@@ -42,8 +45,15 @@ public class LoginPageController {
                     System.out.println(loginDTO.isStatus());
                     if(loginDTO.isStatus())
                     {
+                        Object myobj = client.getSocketWrapper().read();
+                        if(myobj instanceof List)
+                        {
+                            myMovieList = (List<Movie>) myobj;
+                            System.out.println("Received Movie List");
+                        }
                         System.out.println("Loading Home page");
                         client.showHomePage();
+                        new ReadThreadClient(client.getSocketWrapper());
                     }
                     else
                     {
