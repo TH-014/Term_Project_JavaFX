@@ -21,10 +21,12 @@ public class HomePageController {
 //        myMovCon.addInfo();
     }
 
-    public void onMostRecentClick(ActionEvent actionEvent) {
+    public void onMostRecentClick(ActionEvent actionEvent) throws IOException {
+        client.showRecentMoviePage();
     }
 
-    public void onMaximumRevenueClick(ActionEvent actionEvent) {
+    public void onMaximumRevenueClick(ActionEvent actionEvent) throws IOException {
+        client.showMaxRevenuePage();
     }
 
     public void onProfitClick(ActionEvent actionEvent) {

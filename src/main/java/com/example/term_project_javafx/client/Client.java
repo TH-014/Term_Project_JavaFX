@@ -3,6 +3,7 @@ package com.example.term_project_javafx.client;
 import com.example.term_project_javafx.HelloApplication;
 import com.example.term_project_javafx.util.SocketWrapper;
 import com.example.term_project_javafx.util.Movie;
+import com.example.term_project_javafx.backend.projectOperation;
 import com.example.term_project_javafx.util.Message;
 import com.example.term_project_javafx.util.LoginDTO;
 import javafx.application.Application;
@@ -20,6 +21,8 @@ public class Client extends Application {
     private Stage stage;
     private SocketWrapper socketWrapper;
     public  List<Movie> myMovieList;
+    public  List<Movie> recentList;
+    public  List<Movie> revenueList;
 
     public SocketWrapper getSocketWrapper() {
         return socketWrapper;
@@ -95,6 +98,36 @@ public class Client extends Application {
 
         // Loading the controller
         MyMoviesController controller = fxmlLoader.getController();
+        controller.setClient(this);
+        controller.addInfo();
+
+        // Set the primary stage
+        stage.setTitle("Movie Database: My Movies");
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void showRecentMoviePage() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("recentlist-page.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        projectOperation.movieList = myMovieList;
+        recentList = projectOperation.searchMovieByCompanyRecentRelease(myMovieList.get(0).getProductionCompany());
+        // Loading the controller
+        RecentlistPageController controller = fxmlLoader.getController();
+        controller.setClient(this);
+        controller.addInfo();
+
+        // Set the primary stage
+        stage.setTitle("Movie Database: My Movies");
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void showMaxRevenuePage() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("max-revenue.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        projectOperation.movieList = myMovieList;
+        revenueList = projectOperation.searchMovieByCompanyRevenue(myMovieList.get(0).getProductionCompany());
+        // Loading the controller
+        MaxRevenueController controller = fxmlLoader.getController();
         controller.setClient(this);
         controller.addInfo();
 
