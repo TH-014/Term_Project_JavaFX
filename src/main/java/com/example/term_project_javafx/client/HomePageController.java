@@ -37,7 +37,8 @@ public class HomePageController {
         client.showAddMoviePage();
     }
 
-    public void onTransferMovieClick(ActionEvent actionEvent) {
+    public void onTransferMovieClick(ActionEvent actionEvent) throws Exception {
+        client.showTransferPage();
     }
 
     public void onExitClick(ActionEvent actionEvent) {

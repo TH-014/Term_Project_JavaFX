@@ -19,9 +19,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Client extends Application {
-    private Stage stage;
+    private static Stage stage;
     private SocketWrapper socketWrapper;
-    public  List<Movie> myMovieList;
+    public  static List<Movie> myMovieList;
     public  List<Movie> recentList;
     public  List<Movie> revenueList;
     public MovieWrapper movieWrapper;
@@ -74,6 +74,9 @@ public class Client extends Application {
         HomePageController controller = loader.getController();
 //        System.out.println("Test 5");
         controller.setClient(this);
+//        FXMLLoader fxmlLoader1 = new FXMLLoader(HelloApplication.class.getResource("my-movies.fxml"));
+//        MyMoviesController controller1 = fxmlLoader1.getController();
+//        controller1.setClient(this);
 //        System.out.println("Test 6");
 
         // Set the primary stage
@@ -119,7 +122,7 @@ public class Client extends Application {
         controller.addInfo();
 
         // Set the primary stage
-        stage.setTitle("Movie Database: My Movies");
+        stage.setTitle("Movie Database: Recent Movies");
         stage.setScene(scene);
         stage.show();
     }
@@ -134,7 +137,7 @@ public class Client extends Application {
         controller.addInfo();
 
         // Set the primary stage
-        stage.setTitle("Movie Database: My Movies");
+        stage.setTitle("Movie Database: Maximum Revenue");
         stage.setScene(scene);
         stage.show();
     }
@@ -150,7 +153,7 @@ public class Client extends Application {
         controller.setProfit(profit);
 
         // Set the primary stage
-        stage.setTitle("Movie Database: My Movies");
+        stage.setTitle("Movie Database: Total Profit");
         stage.setScene(scene);
         stage.show();
     }
@@ -165,18 +168,23 @@ public class Client extends Application {
         //controller.addMovieWarning.setText(AddMovieController.labelWarning);
 
         // Set the primary stage
-        stage.setTitle("Movie Database: My Movies");
+        stage.setTitle("Movie Database: Add Movie");
         stage.setScene(scene);
         stage.show();
     }
-//    public void addMovCheck()
-//    {
-//        Alert alert = new Alert(Alert.AlertType.ERROR);
-//        alert.setTitle("Unable to add movie");
-//        alert.setHeaderText("A movie with same name exists!");
-//        alert.setContentText("You can't add a movie with the same name of an existing movie.");
-//        alert.showAndWait();
-//    }
+    public void showTransferPage() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("transfer.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        // Loading the controller
+        TransferController controller = fxmlLoader.getController();
+        controller.setClient(this);
+
+        // Set the primary stage
+        stage.setTitle("Movie Database: Transfer Page");
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }
 
 

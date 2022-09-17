@@ -88,7 +88,28 @@ public class ReadThreadServer implements Runnable {
                         }
                         else if(mywrap.getCommand().equals("transfer"))
                         {
-
+                            int index=-1;
+                            for (int i=0; i<movieList.size(); i++)
+                            {
+                                if(movieList.get(i).getTitle().equalsIgnoreCase(mywrap.getMovie().getTitle()))
+                                {
+                                    index = i;
+                                    movieList.get(i).setProductionCompany(mywrap.getTo());
+                                    break;
+                                }
+                            }
+                            List<Movie> senderList = productionCompanyMap.get(mywrap.getFrom());
+                            List<Movie> receiverList = productionCompanyMap.get(mywrap.getTo());
+                            receiverList.add(mywrap.getMovie());
+                            senderList.remove(mywrap.getMovie());
+                            productionCompanyMap.put(mywrap.getFrom(), senderList);
+                            productionCompanyMap.put(mywrap.getTo(), receiverList);
+                            try {
+                                SocketWrapper sw = clientMap.get(mywrap.getTo());
+                                sw.write(mywrap.getMovie());
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
                         }
                     }
                 }

@@ -2,6 +2,7 @@ package com.example.term_project_javafx.client;
 
 import com.example.term_project_javafx.util.*;
 import javafx.application.Platform;
+import javafx.scene.control.Labeled;
 
 import java.io.IOException;
 import java.util.List;
@@ -22,29 +23,40 @@ public class ReadThreadClient implements Runnable {
     }
 
     public void run() {
-        //            System.out.println("In Read Thread Client");
-//            Object o = client.getSocketWrapper().read();
-//            if(o != null)
-//            {
-//                if(o instanceof MovieWrapper)
-//                {
-//                    MovieWrapper mywrap = (MovieWrapper) o;
-//                    if(mywrap.getCommand().equals("added"))
-//                    {
-//                        client.myMovieList.add(mywrap.getMovie());
-//                        //client.addMovCheck();
-////                        System.out.println("Run Later");
-////                        client.addController.addMovieWarning.setText("Movie Added!");
-////                        client.addController.addMovieWarning.setStyle("-fx-text-fill: green;");
-//
-//                    }
-//                    else {
-//                        //AddMovieController controller = new AddMovieController();
-//                        //AddMovieController.labelWarning = new String("Already a movie exists with this name!");
-//                        client.addController.addMovieWarning.setText("Already a movie exists with this name!");
-//                    }
-//                }
-//            }
+        System.out.println("In Read Thread Client");
+        while(true)
+        {
+            Object o = null;
+            try {
+                o = client.getSocketWrapper().read();
+            } catch (IOException | ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+            if(o != null)
+            {
+                if(o instanceof Movie)
+                {
+                    Movie myMov = (Movie) o;
+                    Client.myMovieList.add(myMov);
+                    Client.myMovieList.get(Client.myMovieList.size()-1).showMovie();
+                    //MyMoviesController.myMovieList.add(myMov);
+                } else if (o instanceof  MovieWrapper) {
+                    MovieWrapper mywrap = (MovieWrapper) o;
+                    if(mywrap.getCommand().equals("added"))
+                    {
+                        Client.myMovieList.add(mywrap.getMovie());
+                        AddMovieController.labelWarning = "Movie Added!";
+                        //addMovieWarning.setText("Movie Added!");
+                        //addMovieWarning.setStyle("-fx-text-fill: green;");
+
+                    }
+                    else {
+                        AddMovieController.labelWarning = "Already a movie exists with this name!";
+                        //addMovieWarning.setText("Already a movie exists with this name!");
+                    }
+                }
+            }
+        }
         //            Object o = client.getSocketWrapper().read();
 //            if (o != null) {
 //                if (o instanceof LoginDTO) {

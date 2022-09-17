@@ -46,7 +46,8 @@ public class RecentlistPageController implements Initializable {
 
     void addInfo()
     {
-        if(client.myMovieList==null)
+        if(
+                Client.myMovieList ==null)
         {
             System.out.println("Movie List is null");
         }

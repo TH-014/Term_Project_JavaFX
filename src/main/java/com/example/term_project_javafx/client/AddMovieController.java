@@ -41,7 +41,7 @@ public class AddMovieController {
         time = Integer.parseInt(lengthBox.getText());
         budget = Integer.parseInt(budgetBox.getText());
         revenue = Integer.parseInt(revenueBox.getText());
-        productionCompany = client.myMovieList.get(0).getProductionCompany();
+        productionCompany = Client.myMovieList.get(0).getProductionCompany();
         Movie mv = new Movie(title, genre1, genre2, genre3, productionCompany, year, time, budget, revenue);
         //MovieWrapper mywrap = new MovieWrapper("add",productionCompany,productionCompany,mv);
         //client.movieWrapper = mywrap;
@@ -52,40 +52,39 @@ public class AddMovieController {
             e.printStackTrace();
         }
         System.out.println("MovieWrappwr written");
-        Object obj = null;
-        try {
-            SocketWrapper sw = client.getSocketWrapper();
-            obj = sw.read();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        if(obj != null)
+//        Object obj = null;
+//        try {
+//            SocketWrapper sw = client.getSocketWrapper();
+//            obj = sw.read();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        if(obj != null)
+//        {
+//            if(obj instanceof MovieWrapper)
+//            {
+//                MovieWrapper mywrap = (MovieWrapper) obj;
+//                if(mywrap.getCommand().equals("added"))
+//                {
+//                    Client.myMovieList.add(mywrap.getMovie());
+//                    addMovieWarning.setText("Movie Added!");
+//                    addMovieWarning.setStyle("-fx-text-fill: green;");
+//
+//                }
+//                else {
+//                    addMovieWarning.setText("Already a movie exists with this name!");
+//                }
+//            }
+//        }
+        while (labelWarning!=null)
         {
-            if(obj instanceof MovieWrapper)
-            {
-                MovieWrapper mywrap = (MovieWrapper) obj;
-                if(mywrap.getCommand().equals("added"))
-                {
-                    client.myMovieList.add(mywrap.getMovie());
-                    addMovieWarning.setText("Movie Added!");
-                    addMovieWarning.setStyle("-fx-text-fill: green;");
-
-                }
-                else {
-                    addMovieWarning.setText("Already a movie exists with this name!");
-                }
-            }
-        }
-        while (addMovieWarning.getText()!=null)
-        {
-            String lText = addMovieWarning.getText();
-            if(lText.equals("Movie Added!"))
+            if(labelWarning.equals("Movie Added!"))
             {
                 client.showMyMoviePage();
                 break;
             }
-            else if (lText.equals("Already a movie exists with this name!")) {
-                addMovieWarning.setText(null);
+            else if (labelWarning.equals("Already a movie exists with this name!")) {
+                addMovieWarning.setText(labelWarning);
             }
         }
     }

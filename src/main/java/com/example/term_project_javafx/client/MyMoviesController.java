@@ -35,14 +35,16 @@ public class MyMoviesController implements Initializable {
 
     void addInfo()
     {
-        if(client.myMovieList==null)
+        myMovieList = Client.myMovieList;
+        myMovieList = Client.myMovieList;
+        if(Client.myMovieList ==null)
         {
             System.out.println("Movie List is null");
         }
         else
         {
             table.getItems().clear();
-            for(Movie mv: client.myMovieList)
+            for(Movie mv: myMovieList)
                 table.getItems().add(mv);
         }
     }
