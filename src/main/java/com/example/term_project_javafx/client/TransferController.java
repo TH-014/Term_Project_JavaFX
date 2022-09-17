@@ -3,14 +3,18 @@ import com.example.term_project_javafx.util.Movie;
 import com.example.term_project_javafx.util.MovieWrapper;
 import com.example.term_project_javafx.util.SocketWrapper;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import com.example.term_project_javafx.backend.projectOperation;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class TransferController {
+public class TransferController implements Initializable {
     public TextField movNameBox;
     public TextField proComBox;
 
@@ -19,14 +23,16 @@ public class TransferController {
 
     public static Client client;
     public Label warningLabel;
+    public ChoiceBox<String> prodComCheckBox;
+    public ChoiceBox<String> movNameCheckBox;
 
     public void setClient(Client cl)
     {
         client = cl;
     }
     public void onTransferClick(ActionEvent actionEvent) throws Exception {
-        movieName = movNameBox.getText();
-        prodCompany = proComBox.getText();
+        //movieName = movNameBox.getText();
+        //prodCompany = proComBox.getText();
         projectOperation.movieList = Client.myMovieList;
         List<Movie> movie = projectOperation.searchMovieByTitle(movieName);
         if(movie.size()>0)
@@ -50,5 +56,23 @@ public class TransferController {
 
     public void onBackClick(ActionEvent actionEvent) throws Exception {
         client.showHomePage();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        prodComCheckBox.getItems().addAll(Client.movieTitleList);
+        prodComCheckBox.setOnAction(this::choiceDone);
+        movNameCheckBox.getItems().addAll(Client.movieNameList);
+        movNameCheckBox.setOnAction(this::choiceDone2);
+    }
+
+    private void choiceDone2(ActionEvent actionEvent) {
+        movieName = movNameCheckBox.getValue();
+        System.out.println(movieName);
+    }
+
+    public void choiceDone(ActionEvent actionEvent) {
+        prodCompany = prodComCheckBox.getValue();
+        System.out.println(prodCompany);
     }
 }

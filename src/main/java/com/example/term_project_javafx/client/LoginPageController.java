@@ -3,28 +3,32 @@ package com.example.term_project_javafx.client;
 import com.example.term_project_javafx.util.Movie;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import com.example.term_project_javafx.util.LoginDTO;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class LoginPageController {
+public class LoginPageController implements Initializable {
     public Client client;
-    @FXML
-    public TextField productionCompany;
     @FXML
     public PasswordField passwordBox;
     public static List<Movie> myMovieList;
+    public Label loginLabel;
+    public static List<String> movieTitleList;
+    public ChoiceBox<String> logInChoiceBox;
     @FXML
     private Button loginButton;
     @FXML
     private Button resetButton;
+    String name;
 
     public void onLoginClick(ActionEvent actionEvent) {
-        String name = productionCompany.getText();
+        //String name = productionCompany.getText();
         String password = passwordBox.getText();
         System.out.println(name);
         System.out.println(password);
@@ -75,10 +79,22 @@ public class LoginPageController {
     }
 
     public void onResetClick(ActionEvent actionEvent) {
-        productionCompany.setText(null);
+        //productionCompany.setText(null);
         passwordBox.setText(null);
     }
     void setClient(Client client) {
         this.client = client;
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        //should be initialized
+        logInChoiceBox.getItems().addAll(movieTitleList);
+        logInChoiceBox.setOnAction(this::choiceDone);
+    }
+
+    public void choiceDone(ActionEvent actionEvent) {
+        name = logInChoiceBox.getValue();
+        System.out.println(name);
     }
 }

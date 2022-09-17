@@ -15,6 +15,7 @@ import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -22,6 +23,8 @@ public class Client extends Application {
     private static Stage stage;
     private SocketWrapper socketWrapper;
     public  static List<Movie> myMovieList;
+    public static List<String> movieTitleList;
+    public static List<String> movieNameList;
     public  List<Movie> recentList;
     public  List<Movie> revenueList;
     public MovieWrapper movieWrapper;
@@ -42,6 +45,18 @@ public class Client extends Application {
         String serverAddress = "127.0.0.1";
         int serverPort = 33333;
         socketWrapper = new SocketWrapper(serverAddress, serverPort);
+        try {
+            Object obj = socketWrapper.read();
+            if(obj instanceof List)
+            {
+                movieTitleList = (List<String>) obj;
+            }
+            LoginPageController.movieTitleList = movieTitleList;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
         //new ReadThreadClient(this.socketWrapper, this);
     }
 
@@ -63,6 +78,11 @@ public class Client extends Application {
 
 //        System.out.println("Test 1");
         myMovieList = LoginPageController.myMovieList;
+        movieNameList = new ArrayList<>();
+        for(Movie mv: myMovieList)
+        {
+            movieNameList.add(mv.getTitle());
+        }
         FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("home-page.fxml"));
 //        System.out.println("Test 2");
         //loader.setLocation(getClass().getResource("home-page.fxml"));

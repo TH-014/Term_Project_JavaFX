@@ -44,6 +44,13 @@ public class Server implements Runnable{
 
     public void serve(Socket clientSocket) throws IOException, ClassNotFoundException {
         SocketWrapper socketWrapper = new SocketWrapper(clientSocket);
+        try {
+            socketWrapper.write(productionCompanyList);
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
         new ReadThreadServer(clientMap, productionCompanyMap, credentialsMap, productionCompanyList, movieList, socketWrapper);
     }
 
