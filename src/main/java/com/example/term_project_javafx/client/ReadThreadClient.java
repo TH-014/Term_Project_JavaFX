@@ -12,18 +12,40 @@ public class ReadThreadClient implements Runnable {
     public List<Movie> myMovieList;
     private Client client;
 
-    public ReadThreadClient(SocketWrapper socketWrapper) {
+    public ReadThreadClient(SocketWrapper socketWrapper, Client cl) {
         this.socketWrapper = socketWrapper;
         myMovieList = LoginPageController.myMovieList;
+        this.client = cl;
         this.thr = new Thread(this);
         //this.client = client;
         thr.start();
     }
 
     public void run() {
-        try {
-            System.out.println("In Read Thread Client");
+        //            System.out.println("In Read Thread Client");
 //            Object o = client.getSocketWrapper().read();
+//            if(o != null)
+//            {
+//                if(o instanceof MovieWrapper)
+//                {
+//                    MovieWrapper mywrap = (MovieWrapper) o;
+//                    if(mywrap.getCommand().equals("added"))
+//                    {
+//                        client.myMovieList.add(mywrap.getMovie());
+//                        //client.addMovCheck();
+////                        System.out.println("Run Later");
+////                        client.addController.addMovieWarning.setText("Movie Added!");
+////                        client.addController.addMovieWarning.setStyle("-fx-text-fill: green;");
+//
+//                    }
+//                    else {
+//                        //AddMovieController controller = new AddMovieController();
+//                        //AddMovieController.labelWarning = new String("Already a movie exists with this name!");
+//                        client.addController.addMovieWarning.setText("Already a movie exists with this name!");
+//                    }
+//                }
+//            }
+        //            Object o = client.getSocketWrapper().read();
 //            if (o != null) {
 //                if (o instanceof LoginDTO) {
 //                    LoginDTO loginDTO = (LoginDTO) o;
@@ -49,9 +71,9 @@ public class ReadThreadClient implements Runnable {
 //                    {
 //                        myMovieList.get(i).showMovie();
 //                    }
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
-            }
+//                } catch (Exception e) {
+//                    throw new RuntimeException(e);
+//            }
         //Login Completed...
 //        //finally {
 ////            try {
@@ -62,6 +84,3 @@ public class ReadThreadClient implements Runnable {
 //        }
     }
 }
-
-
-

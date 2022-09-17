@@ -41,7 +41,7 @@ public class projectOperation {
         System.out.print("Enter your choice: ");
     }
 
-    static List<Movie> searchMovieByTitle(String name) {
+    public static List<Movie> searchMovieByTitle(String name) {
         List<Movie> prefList = new ArrayList<>();
         for (int i = 0; i < movieList.size(); i++) {
             Movie mv = movieList.get(i);

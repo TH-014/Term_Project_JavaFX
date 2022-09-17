@@ -41,6 +41,7 @@ public class MyMoviesController implements Initializable {
         }
         else
         {
+            table.getItems().clear();
             for(Movie mv: client.myMovieList)
                 table.getItems().add(mv);
         }

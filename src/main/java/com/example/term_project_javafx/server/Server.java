@@ -1,6 +1,7 @@
 package com.example.term_project_javafx.server;
 
 import com.example.term_project_javafx.util.SocketWrapper;
+import com.example.term_project_javafx.util.MovieWrapper;
 import com.example.term_project_javafx.util.Movie;
 import com.example.term_project_javafx.util.LoginDTO;
 
@@ -42,7 +43,7 @@ public class Server implements Runnable{
 
     public void serve(Socket clientSocket) throws IOException, ClassNotFoundException {
         SocketWrapper socketWrapper = new SocketWrapper(clientSocket);
-        new ReadThreadServer(clientMap, productionCompanyMap, credentialsMap, productionCompanyList, socketWrapper);
+        new ReadThreadServer(clientMap, productionCompanyMap, credentialsMap, productionCompanyList, movieList, socketWrapper);
     }
 
     public void readFiles() throws IOException {

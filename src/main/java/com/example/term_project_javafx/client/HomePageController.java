@@ -33,7 +33,8 @@ public class HomePageController {
         client.showProfit();
     }
 
-    public void onAddMovieClick(ActionEvent actionEvent) {
+    public void onAddMovieClick(ActionEvent actionEvent) throws IOException {
+        client.showAddMoviePage();
     }
 
     public void onTransferMovieClick(ActionEvent actionEvent) {

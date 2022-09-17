@@ -3,6 +3,7 @@ package com.example.term_project_javafx.client;
 import com.example.term_project_javafx.HelloApplication;
 import com.example.term_project_javafx.util.SocketWrapper;
 import com.example.term_project_javafx.util.Movie;
+import com.example.term_project_javafx.util.MovieWrapper;
 import com.example.term_project_javafx.backend.projectOperation;
 import com.example.term_project_javafx.util.Message;
 import com.example.term_project_javafx.util.LoginDTO;
@@ -23,6 +24,7 @@ public class Client extends Application {
     public  List<Movie> myMovieList;
     public  List<Movie> recentList;
     public  List<Movie> revenueList;
+    public MovieWrapper movieWrapper;
 
     public SocketWrapper getSocketWrapper() {
         return socketWrapper;
@@ -152,6 +154,29 @@ public class Client extends Application {
         stage.setScene(scene);
         stage.show();
     }
+    public AddMovieController addController;
+    public void showAddMoviePage() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("add-movie.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        // Loading the controller
+        addController = fxmlLoader.getController();
+        addController.setClient(this);
+        //socketWrapper.write("TRY");
+        //controller.addMovieWarning.setText(AddMovieController.labelWarning);
+
+        // Set the primary stage
+        stage.setTitle("Movie Database: My Movies");
+        stage.setScene(scene);
+        stage.show();
+    }
+//    public void addMovCheck()
+//    {
+//        Alert alert = new Alert(Alert.AlertType.ERROR);
+//        alert.setTitle("Unable to add movie");
+//        alert.setHeaderText("A movie with same name exists!");
+//        alert.setContentText("You can't add a movie with the same name of an existing movie.");
+//        alert.showAndWait();
+//    }
 }
 
 

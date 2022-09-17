@@ -20,6 +20,19 @@ public class Movie implements Serializable {
         profit = revenue - budget;
     }
 
+    public Movie(String title, String genre1, String genre2, String genre3, String productionCompany, int year, int time, int budget, int revenue) {
+        this.title = title;
+        this.genre1 = genre1;
+        this.genre2 = genre2;
+        this.genre3 = genre3;
+        this.productionCompany = productionCompany;
+        this.year = year;
+        this.time = time;
+        this.budget = budget;
+        this.revenue = revenue;
+        this.profit = revenue-budget;
+    }
+
     public String getTitle() {
         return title;
     }

@@ -53,7 +53,7 @@ public class LoginPageController {
                         }
                         System.out.println("Loading Home page");
                         client.showHomePage();
-                        new ReadThreadClient(client.getSocketWrapper());
+                        new ReadThreadClient(client.getSocketWrapper(), client);
                     }
                     else
                     {
@@ -65,13 +65,13 @@ public class LoginPageController {
         } catch (Exception e) {
             System.out.println(e);
         }
-        finally {
-            try {
-                client.getSocketWrapper().closeConnection();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+//        finally {
+//            try {
+//                client.getSocketWrapper().closeConnection();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+        //}
     }
 
     public void onResetClick(ActionEvent actionEvent) {
