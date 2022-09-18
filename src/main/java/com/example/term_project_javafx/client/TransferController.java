@@ -6,7 +6,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import com.example.term_project_javafx.backend.projectOperation;
 
 import java.io.IOException;
@@ -15,9 +14,6 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class TransferController implements Initializable {
-    public TextField movNameBox;
-    public TextField proComBox;
-
     public String movieName;
     public String prodCompany;
 
@@ -31,8 +27,6 @@ public class TransferController implements Initializable {
         client = cl;
     }
     public void onTransferClick(ActionEvent actionEvent) throws Exception {
-        //movieName = movNameBox.getText();
-        //prodCompany = proComBox.getText();
         projectOperation.movieList = Client.myMovieList;
         List<Movie> movie = projectOperation.searchMovieByTitle(movieName);
         if(movie.size()>0)
@@ -44,9 +38,8 @@ public class TransferController implements Initializable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            //new ReadThreadClient(client.getSocketWrapper(), client);
             Client.myMovieList.remove(movie.get(0));
-            System.out.println("MovieWrappwr written");
+            System.out.println("MovieWrapper written");
             client.showHomePage();
         }
         else {

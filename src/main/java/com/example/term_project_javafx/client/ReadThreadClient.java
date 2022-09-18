@@ -18,7 +18,6 @@ public class ReadThreadClient implements Runnable {
         myMovieList = LoginPageController.myMovieList;
         this.client = cl;
         this.thr = new Thread(this);
-        //this.client = client;
         thr.start();
     }
 
@@ -39,6 +38,7 @@ public class ReadThreadClient implements Runnable {
                     Movie myMov = (Movie) o;
                     Client.myMovieList.add(myMov);
                     Client.myMovieList.get(Client.myMovieList.size()-1).showMovie();
+                    MyMoviesController.transferDitected=true;
                     //MyMoviesController.myMovieList.add(myMov);
                 }
                 else if (o instanceof  MovieWrapper) {

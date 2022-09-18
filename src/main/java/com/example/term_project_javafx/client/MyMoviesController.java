@@ -11,8 +11,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
 
 public class MyMoviesController implements Initializable {
+    public static boolean transferDitected=false;
+    public static boolean backClicked=false;
     @FXML
     public TableView<Movie> table;
     public TableColumn<Movie, String> titleCol;
@@ -36,7 +39,6 @@ public class MyMoviesController implements Initializable {
     void addInfo()
     {
         myMovieList = Client.myMovieList;
-        myMovieList = Client.myMovieList;
         if(Client.myMovieList ==null)
         {
             System.out.println("Movie List is null");
@@ -49,11 +51,13 @@ public class MyMoviesController implements Initializable {
         }
     }
     public void onBackClick(ActionEvent actionEvent) throws Exception {
+        backClicked = true;
         client.showHomePage();
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        backClicked = false;
         titleCol.setCellValueFactory(new PropertyValueFactory<>("title"));
         yearCol.setCellValueFactory(new PropertyValueFactory<>("year"));
         gen1Col.setCellValueFactory(new PropertyValueFactory<>("genre1"));
@@ -62,5 +66,6 @@ public class MyMoviesController implements Initializable {
         lengthCol.setCellValueFactory(new PropertyValueFactory<>("time"));
         budgetCol.setCellValueFactory(new PropertyValueFactory<>("budget"));
         revenueCol.setCellValueFactory(new PropertyValueFactory<>("revenue"));
+        new TransferUpdate(this);
     }
 }
