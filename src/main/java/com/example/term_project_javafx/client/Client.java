@@ -206,5 +206,3 @@ public class Client extends Application {
     }
 
 }
-
-

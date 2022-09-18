@@ -44,6 +44,3 @@ public class WriteThreadClient implements Runnable {
         }
     }
 }
-
-
-
