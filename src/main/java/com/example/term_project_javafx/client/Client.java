@@ -27,6 +27,8 @@ public class Client extends Application {
     public static List<String> movieNameList;
     public  List<Movie> recentList;
     public  List<Movie> revenueList;
+    public String serverIp = "127.0.0.1";
+    public int serverPort = 33333;
     public MovieWrapper movieWrapper;
 
     public SocketWrapper getSocketWrapper() {
@@ -38,13 +40,28 @@ public class Client extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
-        connectToServer();
-        showLoginPage();
+        connectToServer(serverIp, serverPort);
     }
-    private void connectToServer() throws IOException {
-        String serverAddress = "127.0.0.1";
-        int serverPort = 33333;
-        socketWrapper = new SocketWrapper(serverAddress, serverPort);
+    public void connectToServer(String serverAddress, int serverPort) throws IOException {
+        try{
+            socketWrapper = new SocketWrapper(serverAddress, serverPort);
+            loadProdComArray();
+            showLoginPage();
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            ServerConnectionController.client = this;
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("server-connection.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+
+            // Set the primary stage
+            stage.setTitle("Movie Database: Server Connection");
+            stage.setScene(scene);
+            stage.show();
+        }
+    }
+    public void loadProdComArray()
+    {
         try {
             Object obj = socketWrapper.read();
             if(obj instanceof List)
@@ -57,7 +74,6 @@ public class Client extends Application {
         {
             System.out.println(e);
         }
-        //new ReadThreadClient(this.socketWrapper, this);
     }
 
     public void showLoginPage() throws IOException {
@@ -76,7 +92,6 @@ public class Client extends Application {
     }
     public void showHomePage() throws Exception {
 
-//        System.out.println("Test 1");
         myMovieList = LoginPageController.myMovieList;
         movieNameList = new ArrayList<>();
         for(Movie mv: myMovieList)
@@ -84,28 +99,16 @@ public class Client extends Application {
             movieNameList.add(mv.getTitle());
         }
         FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("home-page.fxml"));
-//        System.out.println("Test 2");
-        //loader.setLocation(getClass().getResource("home-page.fxml"));
-//        System.out.println("Test 3");
-        Parent root = loader.load();//illegal state exception
-//        System.out.println("Test 4");
+        Parent root = loader.load();
 
         // Loading the controller
         HomePageController controller = loader.getController();
-//        System.out.println("Test 5");
         controller.setClient(this);
-//        FXMLLoader fxmlLoader1 = new FXMLLoader(HelloApplication.class.getResource("my-movies.fxml"));
-//        MyMoviesController controller1 = fxmlLoader1.getController();
-//        controller1.setClient(this);
-//        System.out.println("Test 6");
 
         // Set the primary stage
         stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
-//        System.out.println("Test 7");
         stage.setScene(new Scene(root, 900, 600));
-//        System.out.println("Test 8");
         stage.show();
-//        System.out.println("Test 9");
     }
 
     public void showAlert() {

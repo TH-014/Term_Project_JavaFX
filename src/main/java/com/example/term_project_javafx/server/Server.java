@@ -1,10 +1,7 @@
 package com.example.term_project_javafx.server;
 
 import com.example.term_project_javafx.util.SocketWrapper;
-import com.example.term_project_javafx.util.MovieWrapper;
 import com.example.term_project_javafx.util.Movie;
-import com.example.term_project_javafx.util.LoginDTO;
-import com.example.term_project_javafx.backend.projectOperation;
 
 import java.io.*;
 import java.net.ServerSocket;
