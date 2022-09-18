@@ -71,7 +71,7 @@ public class TransferController implements Initializable {
         System.out.println(movieName);
     }
 
-    public void choiceDone(ActionEvent actionEvent) {
+    private void choiceDone(ActionEvent actionEvent) {
         prodCompany = prodComCheckBox.getValue();
         System.out.println(prodCompany);
     }

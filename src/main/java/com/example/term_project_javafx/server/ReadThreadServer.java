@@ -33,7 +33,7 @@ public class ReadThreadServer implements Runnable {
 
     public void run() {
         try {
-//            while (true) {
+            while (true) {
                 Object o = socketWrapper.read();
                 if (o != null) {
                     if (o instanceof LoginDTO) {
@@ -45,10 +45,11 @@ public class ReadThreadServer implements Runnable {
                         {
                             clientMap.put(loginDTO.getUserName(),socketWrapper);
                             socketWrapper.write(productionCompanyMap.get(loginDTO.getUserName()));
+                            break;
                         }
                     }
                 }
-//            }
+            }
         } catch (Exception e) {
             System.out.println(e);
         }

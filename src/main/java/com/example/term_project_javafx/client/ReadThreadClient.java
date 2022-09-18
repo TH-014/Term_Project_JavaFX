@@ -26,7 +26,7 @@ public class ReadThreadClient implements Runnable {
         System.out.println("In Read Thread Client");
         while(true)
         {
-            Object o = null;
+            Object o;
             try {
                 o = client.getSocketWrapper().read();
             } catch (IOException | ClassNotFoundException e) {
@@ -40,7 +40,8 @@ public class ReadThreadClient implements Runnable {
                     Client.myMovieList.add(myMov);
                     Client.myMovieList.get(Client.myMovieList.size()-1).showMovie();
                     //MyMoviesController.myMovieList.add(myMov);
-                } else if (o instanceof  MovieWrapper) {
+                }
+                else if (o instanceof  MovieWrapper) {
                     MovieWrapper mywrap = (MovieWrapper) o;
                     if(mywrap.getCommand().equals("added"))
                     {

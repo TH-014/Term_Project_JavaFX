@@ -100,7 +100,7 @@ public class Client extends Application {
 //        System.out.println("Test 6");
 
         // Set the primary stage
-        stage.setTitle("Movie Database: Home Page");
+        stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
 //        System.out.println("Test 7");
         stage.setScene(new Scene(root, 900, 600));
 //        System.out.println("Test 8");
@@ -127,7 +127,7 @@ public class Client extends Application {
         controller.addInfo();
 
         // Set the primary stage
-        stage.setTitle("Movie Database: My Movies");
+        stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
         stage.setScene(scene);
         stage.show();
     }
@@ -142,7 +142,7 @@ public class Client extends Application {
         controller.addInfo();
 
         // Set the primary stage
-        stage.setTitle("Movie Database: Recent Movies");
+        stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
         stage.setScene(scene);
         stage.show();
     }
@@ -157,7 +157,7 @@ public class Client extends Application {
         controller.addInfo();
 
         // Set the primary stage
-        stage.setTitle("Movie Database: Maximum Revenue");
+        stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
         stage.setScene(scene);
         stage.show();
     }
@@ -173,7 +173,7 @@ public class Client extends Application {
         controller.setProfit(profit);
 
         // Set the primary stage
-        stage.setTitle("Movie Database: Total Profit");
+        stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
         stage.setScene(scene);
         stage.show();
     }
@@ -188,7 +188,7 @@ public class Client extends Application {
         //controller.addMovieWarning.setText(AddMovieController.labelWarning);
 
         // Set the primary stage
-        stage.setTitle("Movie Database: Add Movie");
+        stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
         stage.setScene(scene);
         stage.show();
     }
@@ -200,7 +200,7 @@ public class Client extends Application {
         controller.setClient(this);
 
         // Set the primary stage
-        stage.setTitle("Movie Database: Transfer Page");
+        stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
         stage.setScene(scene);
         stage.show();
     }

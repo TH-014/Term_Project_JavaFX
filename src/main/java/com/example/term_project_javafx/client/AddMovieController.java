@@ -52,41 +52,22 @@ public class AddMovieController {
             e.printStackTrace();
         }
         System.out.println("MovieWrappwr written");
-//        Object obj = null;
-//        try {
-//            SocketWrapper sw = client.getSocketWrapper();
-//            obj = sw.read();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        if(obj != null)
-//        {
-//            if(obj instanceof MovieWrapper)
-//            {
-//                MovieWrapper mywrap = (MovieWrapper) obj;
-//                if(mywrap.getCommand().equals("added"))
-//                {
-//                    Client.myMovieList.add(mywrap.getMovie());
-//                    addMovieWarning.setText("Movie Added!");
-//                    addMovieWarning.setStyle("-fx-text-fill: green;");
-//
-//                }
-//                else {
-//                    addMovieWarning.setText("Already a movie exists with this name!");
-//                }
-//            }
-//        }
         while (labelWarning!=null)
         {
             if(labelWarning.equals("Movie Added!"))
             {
+                addMovieWarning.setText(labelWarning);
                 client.showMyMoviePage();
                 break;
             }
             else if (labelWarning.equals("Already a movie exists with this name!")) {
+                System.out.println(labelWarning);
                 addMovieWarning.setText(labelWarning);
+                titleBox.setText(null);
+                break;
             }
         }
+        labelWarning=null;
     }
 
     public void onBackClick(ActionEvent actionEvent) throws Exception {
