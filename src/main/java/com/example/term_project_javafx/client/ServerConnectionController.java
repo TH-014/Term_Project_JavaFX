@@ -14,7 +14,12 @@ public class ServerConnectionController {
 
     public void onConnectClick(ActionEvent actionEvent) throws IOException {
         serverIp = serverIPBox.getText();
-        serverPort = Integer.parseInt(serverPortBox.getText());
-        client.connectToServer(serverIp, serverPort);
+        try{
+            serverPort = Integer.parseInt(serverPortBox.getText());
+            client.connectToServer(serverIp, serverPort);
+        } catch (Exception e)
+        {
+            serverPortBox.setText(null);
+        }
     }
 }

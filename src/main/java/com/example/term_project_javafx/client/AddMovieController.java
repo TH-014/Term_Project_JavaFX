@@ -24,7 +24,6 @@ public class AddMovieController {
     public Label addMovieWarning;
     public static String labelWarning;
 
-    private String title, genre1, genre2, genre3, productionCompany;
     private int year, time, budget, revenue;
 
     private static Client client;
@@ -32,42 +31,50 @@ public class AddMovieController {
     {
         client = c;
     }
-    public void onSubmitClick(ActionEvent actionEvent) throws IOException, ClassNotFoundException {
-        title = titleBox.getText();
-        genre1 = genre1Box.getText();
-        genre2 = genre2Box.getText();
-        genre3 = genre3Box.getText();
-        year = Integer.parseInt(yearBox.getText());
-        time = Integer.parseInt(lengthBox.getText());
-        budget = Integer.parseInt(budgetBox.getText());
-        revenue = Integer.parseInt(revenueBox.getText());
-        productionCompany = Client.myMovieList.get(0).getProductionCompany();
-        Movie mv = new Movie(title, genre1, genre2, genre3, productionCompany, year, time, budget, revenue);
-        //MovieWrapper mywrap = new MovieWrapper("add",productionCompany,productionCompany,mv);
-        //client.movieWrapper = mywrap;
+    public void onSubmitClick(ActionEvent actionEvent) throws IOException {
+        String title = titleBox.getText();
+        String genre1 = genre1Box.getText();
+        String genre2 = genre2Box.getText();
+        String genre3 = genre3Box.getText();
+        boolean checked = true;
         try {
-            SocketWrapper sw = client.getSocketWrapper();
-            sw.write(new MovieWrapper("add",productionCompany,productionCompany,mv));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println("MovieWrappwr written");
-        while (labelWarning!=null)
+            year = Integer.parseInt(yearBox.getText());
+            time = Integer.parseInt(lengthBox.getText());
+            budget = Integer.parseInt(budgetBox.getText());
+            revenue = Integer.parseInt(revenueBox.getText());
+        } catch (Exception e)
         {
-            if(labelWarning.equals("Movie Added!"))
-            {
-                addMovieWarning.setText(labelWarning);
-                client.showMyMoviePage();
-                break;
-            }
-            else if (labelWarning.equals("Already a movie exists with this name!")) {
-                System.out.println(labelWarning);
-                addMovieWarning.setText(labelWarning);
-                titleBox.setText(null);
-                break;
-            }
+            checked = false;
+            addMovieWarning.setText("Please complete the fileds correctly");
         }
-        labelWarning=null;
+        if(checked)
+        {
+            String productionCompany = Client.myMovieList.get(0).getProductionCompany();
+            Movie mv = new Movie(title, genre1, genre2, genre3, productionCompany, year, time, budget, revenue);
+            try {
+                SocketWrapper sw = client.getSocketWrapper();
+                sw.write(new MovieWrapper("add", productionCompany, productionCompany,mv));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            System.out.println("MovieWrapper written");
+            while (labelWarning!=null)
+            {
+                if(labelWarning.equals("Movie Added!"))
+                {
+                    addMovieWarning.setText(labelWarning);
+                    client.showMyMoviePage();
+                    break;
+                }
+                else if (labelWarning.equals("Already a movie exists with this name!")) {
+                    System.out.println(labelWarning);
+                    addMovieWarning.setText(labelWarning);
+                    titleBox.setText(null);
+                    break;
+                }
+            }
+            labelWarning=null;
+        }
     }
 
     public void onBackClick(ActionEvent actionEvent) throws Exception {

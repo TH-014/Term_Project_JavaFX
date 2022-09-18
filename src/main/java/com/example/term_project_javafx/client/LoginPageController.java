@@ -97,4 +97,8 @@ public class LoginPageController implements Initializable {
         name = logInChoiceBox.getValue();
         System.out.println(name);
     }
+
+    public void onExitClick(ActionEvent actionEvent) {
+        System.exit(0);
+    }
 }

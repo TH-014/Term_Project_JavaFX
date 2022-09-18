@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.term_project_javafx.client.LoginPageController">
    <children>
-      <Button fx:id="loginButton" layoutX="525.0" layoutY="436.0" mnemonicParsing="false" onAction="#onLoginClick" text="Login">
+      <Button fx:id="loginButton" layoutX="404.0" layoutY="436.0" mnemonicParsing="false" onAction="#onLoginClick" text="Login">
          <font>
             <Font size="24.0" />
          </font>
@@ -19,7 +19,7 @@
             <Font size="18.0" />
          </font>
       </PasswordField>
-      <Button fx:id="resetButton" layoutX="278.0" layoutY="436.0" mnemonicParsing="false" onAction="#onResetClick" text="Reset">
+      <Button fx:id="resetButton" layoutX="130.0" layoutY="436.0" mnemonicParsing="false" onAction="#onResetClick" text="Reset">
          <font>
             <Font size="24.0" />
          </font>
@@ -30,5 +30,10 @@
             <Font size="24.0" />
          </font>
       </Label>
+      <Button layoutX="677.0" layoutY="436.0" mnemonicParsing="false" onAction="#onExitClick" text="Exit">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

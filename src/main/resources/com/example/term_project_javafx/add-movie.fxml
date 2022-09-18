@@ -13,7 +13,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="titleBox" layoutX="48.0" layoutY="64.0" prefHeight="40.0" prefWidth="824.0" promptText="Enter Movie Title">
+      <TextField fx:id="titleBox" layoutX="48.0" layoutY="94.0" prefHeight="40.0" prefWidth="824.0" promptText="Enter Movie Title">
          <font>
             <Font size="18.0" />
          </font>
@@ -63,7 +63,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Label fx:id="addMovieWarning" layoutX="48.0" layoutY="114.0" prefHeight="18.0" prefWidth="824.0" textFill="RED">
+      <Label fx:id="addMovieWarning" layoutX="48.0" layoutY="58.0" prefHeight="18.0" prefWidth="824.0" textFill="RED">
          <font>
             <Font size="14.0" />
          </font>
