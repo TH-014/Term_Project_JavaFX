@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -40,6 +41,7 @@ public class Client extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
+        stage.getIcons().add(new Image("icon.jpg"));
         connectToServer(serverIp, serverPort);
     }
     public void connectToServer(String serverAddress, int serverPort) throws IOException {
@@ -84,7 +86,8 @@ public class Client extends Application {
         // Loading the controller
         LoginPageController controller = fxmlLoader.getController();
         controller.setClient(this);
-
+//        Image image = new Image("icon.webp");
+//        stage.getIcons().add(image);
         // Set the primary stage
         stage.setTitle("Movie Database: Login");
         stage.setScene(scene);
