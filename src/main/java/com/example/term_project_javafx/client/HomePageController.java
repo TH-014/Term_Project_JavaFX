@@ -1,10 +1,12 @@
 package com.example.term_project_javafx.client;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 
 import java.io.IOException;
 
 public class HomePageController {
+    public Button exitButton;
     private Client client;
 
     public Client getClient() {

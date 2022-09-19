@@ -4,36 +4,58 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.term_project_javafx.client.LoginPageController">
    <children>
-      <Button fx:id="loginButton" layoutX="404.0" layoutY="436.0" mnemonicParsing="false" onAction="#onLoginClick" text="Login">
+      <Button fx:id="loginButton" layoutX="506.0" layoutY="384.0" mnemonicParsing="false" onAction="#onLoginClick" text="Login">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <PasswordField fx:id="passwordBox" layoutX="29.0" layoutY="322.0" prefHeight="43.0" prefWidth="839.0" promptText="Password">
+      <PasswordField fx:id="passwordBox" layoutX="190.0" layoutY="278.0" prefHeight="40.0" prefWidth="630.0" promptText="Password">
          <font>
             <Font size="18.0" />
          </font>
       </PasswordField>
-      <Button fx:id="resetButton" layoutX="130.0" layoutY="436.0" mnemonicParsing="false" onAction="#onResetClick" text="Reset">
+      <Button layoutX="296.0" layoutY="384.0" mnemonicParsing="false" onAction="#onResetClick" text="Reset">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <ChoiceBox fx:id="logInChoiceBox" layoutX="30.0" layoutY="254.0" prefHeight="45.0" prefWidth="839.0" />
+      <ChoiceBox fx:id="logInChoiceBox" layoutX="191.0" layoutY="215.0" prefHeight="40.0" prefWidth="630.0" />
       <Label fx:id="loginLabel" alignment="CENTER" layoutX="30.0" layoutY="77.0" prefHeight="43.0" prefWidth="839.0" text="Login to your Production Company" textAlignment="CENTER" textFill="#00f6ff">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="677.0" layoutY="436.0" mnemonicParsing="false" onAction="#onExitClick" text="Exit">
+      <Button fx:id="exitButton" layoutX="30.0" layoutY="519.0" mnemonicParsing="false" onAction="#onExitClick" text="Exit">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
+      <Label layoutX="100.0" layoutY="215.0" prefHeight="40.0" prefWidth="90.0" text="Username" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="278.0" prefHeight="40.0" prefWidth="90.0" text="Password" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="usernamePic" fitHeight="40.0" fitWidth="40.0" layoutX="45.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@man.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="passPic" fitHeight="40.0" fitWidth="40.0" layoutX="45.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pass.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

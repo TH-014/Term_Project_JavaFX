@@ -48,7 +48,7 @@ public class ChangePasswordController {
             while (connection)
             {
                 if(serverStatus==null) continue;
-                if(serverStatus.equals("Password successfully changed!"))
+                if(serverStatus.equals("Password changed successfully!"))
                 {
                     warningBox.setText(serverStatus);
                     warningBox.setTextFill(Color.LIGHTGREEN);

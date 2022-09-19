@@ -1,6 +1,5 @@
 package com.example.term_project_javafx.client;
 
-import com.example.term_project_javafx.util.Movie;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -21,6 +20,7 @@ public class LoginPageController implements Initializable {
     public static List<String> movieTitleList;
     public ChoiceBox<String> logInChoiceBox;
     public static int loginStatus=0;
+    public Button exitButton;
     String name;
 
     public void onLoginClick(ActionEvent actionEvent) throws Exception {

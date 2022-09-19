@@ -87,7 +87,7 @@ public class ReadThreadClient implements Runnable {
                     PassWrapper passWrapper = (PassWrapper) o;
                     if(passWrapper.isStatus())
                     {
-                        ChangePasswordController.serverStatus="Password successfully changed!";
+                        ChangePasswordController.serverStatus="Password changed successfully!";
                     }
                     else {
                         ChangePasswordController.serverStatus="Wrong Password !!!";
