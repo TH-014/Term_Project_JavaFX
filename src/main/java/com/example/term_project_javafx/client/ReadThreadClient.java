@@ -10,12 +10,12 @@ import java.util.List;
 public class ReadThreadClient implements Runnable {
     private Thread thr;
     private SocketWrapper socketWrapper;
-    public List<Movie> myMovieList;
+    //public List<Movie> myMovieList;
     private Client client;
 
     public ReadThreadClient(SocketWrapper socketWrapper, Client cl) {
         this.socketWrapper = socketWrapper;
-        myMovieList = LoginPageController.myMovieList;
+        //myMovieList = LoginPageController.myMovieList;
         this.client = cl;
         this.thr = new Thread(this);
         thr.start();
@@ -25,15 +25,45 @@ public class ReadThreadClient implements Runnable {
         System.out.println("In Read Thread Client");
         while(true)
         {
-            Object o;
+            Object o = null;
             try {
                 o = client.getSocketWrapper().read();
-            } catch (IOException | ClassNotFoundException e) {
+                System.out.println(o);
+            } catch (IOException e) {
                 throw new RuntimeException(e);
+            } catch (ClassNotFoundException e)
+            {
+                System.out.println(e);
             }
             if(o != null)
             {
-                if(o instanceof Movie)
+                if (o instanceof LoginDTO) {
+                    LoginDTO loginDTO = (LoginDTO) o;
+                    System.out.println(loginDTO.getUserName());
+                    System.out.println(loginDTO.isStatus());
+                    if(loginDTO.isStatus())
+                    {
+                        Object myobj;
+                        try {
+                            myobj = client.getSocketWrapper().read();
+                        } catch (IOException | ClassNotFoundException e) {
+                            throw new RuntimeException(e);
+                        }
+                        if(myobj instanceof List)
+                        {
+                            Client.myMovieList = (List<Movie>) myobj;
+                            System.out.println("Received Movie List");
+                            LoginPageController.loginStatus=1;
+                            System.out.println("Loading Home page"); //Log in issues
+                        }
+                    }
+                    else
+                    {
+                        client.showAlert();
+                        LoginPageController.loginStatus=-1;
+                    }
+                }
+                else if(o instanceof Movie)
                 {
                     Movie myMov = (Movie) o;
                     Client.myMovieList.add(myMov);
@@ -47,13 +77,10 @@ public class ReadThreadClient implements Runnable {
                     {
                         Client.myMovieList.add(mywrap.getMovie());
                         AddMovieController.labelWarning = "Movie Added!";
-                        //addMovieWarning.setText("Movie Added!");
-                        //addMovieWarning.setStyle("-fx-text-fill: green;");
 
                     }
                     else {
                         AddMovieController.labelWarning = "Already a movie exists with this name!";
-                        //addMovieWarning.setText("Already a movie exists with this name!");
                     }
                 }
                 else if (o instanceof PassWrapper) {
@@ -67,43 +94,8 @@ public class ReadThreadClient implements Runnable {
                     }
                 }
             }
+            //System.out.println(login);
         }
-        //            Object o = client.getSocketWrapper().read();
-//            if (o != null) {
-//                if (o instanceof LoginDTO) {
-//                    LoginDTO loginDTO = (LoginDTO) o;
-//                    System.out.println(loginDTO.getUserName());
-//                    System.out.println(loginDTO.isStatus());
-                    // the following is necessary to update JavaFX UI components from user created threads
-//                    Platform.runLater(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            if (loginDTO.isStatus()) {
-//                                try {
-//                                    client.showHomePage();
-//                                } catch (Exception e) {
-//                                    e.printStackTrace();
-//                                }
-//                            } else {
-//                                client.showAlert();
-//                            }
-//
-//                        }
-//                    });
-//                    for (int i=0; i<myMovieList.size(); i++)
-//                    {
-//                        myMovieList.get(i).showMovie();
-//                    }
-//                } catch (Exception e) {
-//                    throw new RuntimeException(e);
-//            }
-        //Login Completed...
-//        //finally {
-////            try {
-////                client.getSocketWrapper().closeConnection();
-////            } catch (IOException e) {
-////                e.printStackTrace();
-////            }
-//        }
+        //System.out.println("Read Thread Client Closed");
     }
 }

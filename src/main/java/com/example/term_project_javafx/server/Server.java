@@ -81,13 +81,6 @@ public class Server implements Runnable{
             credentialsMap.put(str[0],str[1]);
         }
         System.out.println("Credentials Loading Complete...");
-//        for(int i=0;i<productionCompanyList.size(); i++)
-//        {
-//            for(int j=0; j<productionCompanyMap.get(productionCompanyList.get(i)).size();j++)
-//            {
-//                productionCompanyMap.get(productionCompanyList.get(i)).get(j).showMovie();
-//            }
-//        }
         br.close();
     }
     public static void main(String args[]) throws IOException {

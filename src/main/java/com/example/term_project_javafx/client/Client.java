@@ -3,10 +3,7 @@ package com.example.term_project_javafx.client;
 import com.example.term_project_javafx.HelloApplication;
 import com.example.term_project_javafx.util.SocketWrapper;
 import com.example.term_project_javafx.util.Movie;
-import com.example.term_project_javafx.util.MovieWrapper;
 import com.example.term_project_javafx.backend.projectOperation;
-import com.example.term_project_javafx.util.Message;
-import com.example.term_project_javafx.util.LoginDTO;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,7 +15,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Client extends Application {
     private static Stage stage;
@@ -30,7 +26,6 @@ public class Client extends Application {
     public  List<Movie> revenueList;
     public String serverIp = "127.0.0.1";
     public int serverPort = 33333;
-    public MovieWrapper movieWrapper;
     public String css = HelloApplication.class.getResource("rootCSS.css").toExternalForm();
 
     public SocketWrapper getSocketWrapper() {
@@ -49,6 +44,7 @@ public class Client extends Application {
         try{
             socketWrapper = new SocketWrapper(serverAddress, serverPort);
             loadProdComArray();
+            new ReadThreadClient(socketWrapper, this);
             showLoginPage();
         } catch (Exception e)
         {
@@ -96,8 +92,7 @@ public class Client extends Application {
         stage.show();
     }
     public void showHomePage() throws Exception {
-
-        myMovieList = LoginPageController.myMovieList;
+        LoginPageController.loginStatus=0;
         movieNameList = new ArrayList<>();
         for(Movie mv: myMovieList)
         {
@@ -119,10 +114,11 @@ public class Client extends Application {
     }
 
     public void showAlert() {
+        LoginPageController.loginStatus=0;
         Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Incorrect Credentials");
+        alert.setTitle("Access Denied!");
         alert.setHeaderText("Incorrect Credentials");
-        alert.setContentText("The username and password you provided is not correct.");
+        alert.setContentText("The username and password you provided is not correct !!!");
         alert.showAndWait();
     }
 

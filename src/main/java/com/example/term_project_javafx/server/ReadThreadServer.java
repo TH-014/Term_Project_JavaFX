@@ -20,7 +20,7 @@ public class ReadThreadServer implements Runnable {
     public List<Movie> movieList;
 
 
-    public ReadThreadServer(HashMap<String, SocketWrapper> map, HashMap<String, List<Movie>> productionCompanyMap, HashMap<String, String> credentialsMap, List<String> productionCompanyList, List<Movie> movieList,SocketWrapper socketWrapper) {
+    public ReadThreadServer(HashMap<String, SocketWrapper> map, HashMap<String, List<Movie>> productionCompanyMap, HashMap<String, String> credentialsMap, List<String> productionCompanyList, List<Movie> movieList, SocketWrapper socketWrapper) {
         this.clientMap = map;
         this.credentialsMap = credentialsMap;
         this.productionCompanyMap = productionCompanyMap;
@@ -34,44 +34,28 @@ public class ReadThreadServer implements Runnable {
     public void run() {
         try {
             while (true) {
-                Object o = socketWrapper.read();
-                if (o != null) {
-                    if (o instanceof LoginDTO) {
-                        LoginDTO loginDTO = (LoginDTO) o;
+                Object obj = socketWrapper.read();
+                if (obj != null) {
+                    String cname = obj.getClass().getName();
+                    if (obj instanceof LoginDTO) {
+                        LoginDTO loginDTO = (LoginDTO) obj;
                         String password = credentialsMap.get(loginDTO.getUserName());
                         loginDTO.setStatus(loginDTO.getPassword().equals(password));
                         socketWrapper.write(loginDTO);
-                        if(loginDTO.isStatus())
-                        {
-                            clientMap.put(loginDTO.getUserName(),socketWrapper);
+                        if (loginDTO.isStatus()) {
+                            clientMap.put(loginDTO.getUserName(), socketWrapper);
                             socketWrapper.write(productionCompanyMap.get(loginDTO.getUserName()));
-                            break;
                         }
                     }
-                }
-            }
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        System.out.println("Waiting for next Command...");
-        while (true){
-            try {
-                Object obj = socketWrapper.read();
-                if(obj!=null)
-                {
-                    if(obj instanceof MovieWrapper)
-                    {
+                    else if (obj instanceof MovieWrapper) {
                         MovieWrapper mywrap = (MovieWrapper) obj;
-                        if(mywrap.getCommand().equals("add"))
-                        {
+                        if (mywrap.getCommand().equals("add")) {
                             projectOperation.movieList = this.movieList;
                             List<Movie> returned = projectOperation.searchMovieByTitle(mywrap.getMovie().getTitle());
-                            if(returned.size()>0)
-                            {
+                            if (returned.size() > 0) {
                                 mywrap.setCommand("add_rejected");
                                 socketWrapper.write(mywrap);
-                            }
-                            else {
+                            } else {
                                 movieList.add(mywrap.getMovie());
                                 List<Movie> mvList = productionCompanyMap.get(mywrap.getMovie().getProductionCompany());
                                 mvList.add(mywrap.getMovie());
@@ -80,13 +64,10 @@ public class ReadThreadServer implements Runnable {
                                 socketWrapper.write(mywrap);
                             }
                         }
-                        else if(mywrap.getCommand().equals("transfer"))
-                        {
-                            int index=-1;
-                            for (int i=0; i<movieList.size(); i++)
-                            {
-                                if(movieList.get(i).getTitle().equalsIgnoreCase(mywrap.getMovie().getTitle()))
-                                {
+                        else if (mywrap.getCommand().equals("transfer")) {
+                            int index = -1;
+                            for (int i = 0; i < movieList.size(); i++) {
+                                if (movieList.get(i).getTitle().equalsIgnoreCase(mywrap.getMovie().getTitle())) {
                                     index = i;
                                     movieList.get(i).setProductionCompany(mywrap.getTo());
                                     break;
@@ -100,34 +81,29 @@ public class ReadThreadServer implements Runnable {
                             productionCompanyMap.put(mywrap.getTo(), receiverList);
                             try {
                                 SocketWrapper sw = clientMap.get(mywrap.getTo());
-                                sw.write(mywrap.getMovie());
+                                if(clientMap.get(mywrap.getTo())!=clientMap.get(mywrap.getFrom()))
+                                    sw.write(mywrap.getMovie());
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
                         }
                     }
-                    else if(obj instanceof PassWrapper)
-                    {
+                    else if (obj instanceof PassWrapper) {
                         PassWrapper passWrapper = (PassWrapper) obj;
-                        if(passWrapper.getOldPass().equals(credentialsMap.get(passWrapper.getUsername())))
-                        {
+                        if (passWrapper.getOldPass().equals(credentialsMap.get(passWrapper.getUsername()))) {
                             passWrapper.setStatus(true);
                             credentialsMap.put(passWrapper.getUsername(), passWrapper.getNewPass());
                         }
                         try {
                             socketWrapper.write(passWrapper);
-                        } catch (Exception e)
-                        {
+                        } catch (Exception e) {
                             System.out.println(e);
                         }
                     }
                 }
-            } catch (IOException | ClassNotFoundException e) {
-                throw new RuntimeException(e);
             }
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 }
-
-
-

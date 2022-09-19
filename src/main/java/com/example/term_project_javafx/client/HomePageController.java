@@ -46,4 +46,8 @@ public class HomePageController {
     public void onExitClick(ActionEvent actionEvent) {
         System.exit(0);
     }
+
+    public void onLogoutClick(ActionEvent actionEvent) throws IOException {
+        client.showLoginPage();
+    }
 }

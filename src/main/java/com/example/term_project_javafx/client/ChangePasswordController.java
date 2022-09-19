@@ -5,7 +5,6 @@ import com.example.term_project_javafx.util.SocketWrapper;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 
 import java.io.IOException;
