@@ -56,6 +56,16 @@ public class ReadThreadClient implements Runnable {
                         //addMovieWarning.setText("Already a movie exists with this name!");
                     }
                 }
+                else if (o instanceof PassWrapper) {
+                    PassWrapper passWrapper = (PassWrapper) o;
+                    if(passWrapper.isStatus())
+                    {
+                        ChangePasswordController.serverStatus="Password successfully changed!";
+                    }
+                    else {
+                        ChangePasswordController.serverStatus="Wrong Password !!!";
+                    }
+                }
             }
         }
         //            Object o = client.getSocketWrapper().read();

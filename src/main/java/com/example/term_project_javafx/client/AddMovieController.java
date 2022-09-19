@@ -58,8 +58,9 @@ public class AddMovieController {
                 e.printStackTrace();
             }
             System.out.println("MovieWrapper written");
-            while (labelWarning!=null)
+            while (true)
             {
+                if(labelWarning==null) continue;
                 if(labelWarning.equals("Movie Added!"))
                 {
                     addMovieWarning.setText(labelWarning);

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.term_project_javafx.client.MaxRevenueController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.term_project_javafx.client.MaxRevenueController">
     <children>
         <TableView fx:id="table" layoutX="14.0" layoutY="60.0" prefHeight="465.0" prefWidth="870.0">
             <columns>
@@ -18,9 +21,9 @@
                 <TableColumn fx:id="revenueCol" prefWidth="100.0" text="Revenue" />
             </columns>
         </TableView>
-        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="874.0" text="Movie List" textAlignment="CENTER" textFill="#430dd9">
+        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="874.0" text="Movie List with Maximum Revenue" textAlignment="CENTER" textFill="#00f6ff">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="24.0" />
          </font></Label>
         <Button alignment="CENTER" layoutX="420.0" layoutY="539.0" mnemonicParsing="false" onAction="#onBackClick" text="Back" textAlignment="CENTER">
          <font>

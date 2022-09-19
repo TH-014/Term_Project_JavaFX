@@ -17,8 +17,6 @@ public class HomePageController {
 
     public void onMyMoviesClick(ActionEvent actionEvent) throws IOException {
         client.showMyMoviePage();
-//        MyMoviesController myMovCon = new MyMoviesController();
-//        myMovCon.addInfo();
     }
 
     public void onMostRecentClick(ActionEvent actionEvent) throws IOException {
@@ -39,6 +37,10 @@ public class HomePageController {
 
     public void onTransferMovieClick(ActionEvent actionEvent) throws Exception {
         client.showTransferPage();
+    }
+
+    public void onChangeClick(ActionEvent actionEvent) throws IOException {
+        client.changePassword();
     }
 
     public void onExitClick(ActionEvent actionEvent) {

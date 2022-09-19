@@ -8,9 +8,9 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.term_project_javafx.client.TransferController">
    <children>
-      <Label alignment="CENTER" layoutX="75.0" layoutY="82.0" prefHeight="18.0" prefWidth="750.0" text="Transfer Movie Ownership" textFill="#4004f7">
+      <Label alignment="CENTER" layoutX="75.0" layoutY="82.0" prefHeight="18.0" prefWidth="750.0" text="Transfer Movie Ownership" textFill="#00f6ff">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
       <Button layoutX="528.0" layoutY="471.0" mnemonicParsing="false" onAction="#onTransferClick" text="Transfer">
@@ -29,12 +29,12 @@
          </font>
       </Label>
       <ChoiceBox fx:id="prodComCheckBox" layoutX="74.0" layoutY="354.0" prefHeight="40.0" prefWidth="750.0" />
-      <Label layoutX="74.0" layoutY="312.0" prefHeight="18.0" prefWidth="750.0" text="Enter Production Company:" textFill="#8c8585eb">
+      <Label layoutX="74.0" layoutY="312.0" prefHeight="18.0" prefWidth="750.0" text="Enter Production Company:" textFill="#ddff00eb">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="74.0" layoutY="186.0" prefHeight="18.0" prefWidth="750.0" text="Enter Movie Name:" textFill="#8c8585">
+      <Label layoutX="74.0" layoutY="186.0" prefHeight="18.0" prefWidth="750.0" text="Enter Movie Name:" textFill="#ddff00">
          <font>
             <Font size="18.0" />
          </font>

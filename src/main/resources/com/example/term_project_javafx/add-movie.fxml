@@ -8,9 +8,9 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.term_project_javafx.client.AddMovieController">
    <children>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="874.0" text="Add Movie" textAlignment="CENTER">
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="874.0" text="Add Movie" textAlignment="CENTER" textFill="#78cdea">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
       <TextField fx:id="titleBox" layoutX="48.0" layoutY="94.0" prefHeight="40.0" prefWidth="824.0" promptText="Enter Movie Title">
@@ -63,7 +63,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Label fx:id="addMovieWarning" layoutX="48.0" layoutY="58.0" prefHeight="18.0" prefWidth="824.0" textFill="RED">
+      <Label fx:id="addMovieWarning" layoutX="48.0" layoutY="58.0" prefHeight="18.0" prefWidth="824.0" textFill="#ddff00">
          <font>
             <Font size="14.0" />
          </font>

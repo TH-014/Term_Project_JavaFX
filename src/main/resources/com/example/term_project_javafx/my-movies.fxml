@@ -21,9 +21,9 @@
             <TableColumn fx:id="revenueCol" prefWidth="100.0" text="Revenue" />
         </columns>
       </TableView>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="874.0" text="Movie List" textAlignment="CENTER" textFill="#430dd9">
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="874.0" text="Movie List" textAlignment="CENTER" textFill="#00f6ff">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
       <Button layoutX="420.0" layoutY="539.0" mnemonicParsing="false" onAction="#onBackClick" text="Back">

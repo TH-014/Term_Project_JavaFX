@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.term_project_javafx.client.TotalProfitController">
    <children>
@@ -14,15 +15,21 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Label alignment="CENTER_RIGHT" layoutX="43.0" layoutY="292.0" prefHeight="35.0" prefWidth="392.0" text="Total Profit:   " textAlignment="RIGHT" textFill="#440cdf">
+      <Label alignment="CENTER_RIGHT" layoutX="43.0" layoutY="292.0" prefHeight="35.0" prefWidth="392.0" text="Total Profit:   " textAlignment="RIGHT" textFill="#00f6ff">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <TextField fx:id="profitBox" layoutX="435.0" layoutY="284.0" prefHeight="26.0" prefWidth="432.0" promptText="Profit">
          <font>
             <Font size="24.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
       </TextField>
    </children>
 </AnchorPane>

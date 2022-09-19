@@ -2,10 +2,10 @@ package com.example.term_project_javafx.server;
 
 import com.example.term_project_javafx.util.SocketWrapper;
 import com.example.term_project_javafx.util.MovieWrapper;
+import com.example.term_project_javafx.util.PassWrapper;
 import com.example.term_project_javafx.util.Movie;
 import com.example.term_project_javafx.util.LoginDTO;
 import com.example.term_project_javafx.backend.projectOperation;
-import com.example.term_project_javafx.util.Message;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -53,13 +53,6 @@ public class ReadThreadServer implements Runnable {
         } catch (Exception e) {
             System.out.println(e);
         }
-//        finally {
-//            try {
-//                socketWrapper.closeConnection();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
         System.out.println("Waiting for next Command...");
         while (true){
             try {
@@ -111,6 +104,21 @@ public class ReadThreadServer implements Runnable {
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
+                        }
+                    }
+                    else if(obj instanceof PassWrapper)
+                    {
+                        PassWrapper passWrapper = (PassWrapper) obj;
+                        if(passWrapper.getOldPass().equals(credentialsMap.get(passWrapper.getUsername())))
+                        {
+                            passWrapper.setStatus(true);
+                            credentialsMap.put(passWrapper.getUsername(), passWrapper.getNewPass());
+                        }
+                        try {
+                            socketWrapper.write(passWrapper);
+                        } catch (Exception e)
+                        {
+                            System.out.println(e);
                         }
                     }
                 }

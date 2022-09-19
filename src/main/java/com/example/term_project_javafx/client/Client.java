@@ -31,6 +31,7 @@ public class Client extends Application {
     public String serverIp = "127.0.0.1";
     public int serverPort = 33333;
     public MovieWrapper movieWrapper;
+    public String css = HelloApplication.class.getResource("rootCSS.css").toExternalForm();
 
     public SocketWrapper getSocketWrapper() {
         return socketWrapper;
@@ -55,6 +56,7 @@ public class Client extends Application {
             ServerConnectionController.client = this;
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("server-connection.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+            scene.getStylesheets().add(css);
 
             // Set the primary stage
             stage.setTitle("Movie Database: Server Connection");
@@ -86,6 +88,7 @@ public class Client extends Application {
         // Loading the controller
         LoginPageController controller = fxmlLoader.getController();
         controller.setClient(this);
+        scene.getStylesheets().add(css);
 //        Image image = new Image("icon.webp");
 //        stage.getIcons().add(image);
         // Set the primary stage
@@ -107,10 +110,12 @@ public class Client extends Application {
         // Loading the controller
         HomePageController controller = loader.getController();
         controller.setClient(this);
+        Scene scene = new Scene(root, 900, 600);
+        scene.getStylesheets().add(css);
 
         // Set the primary stage
         stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(scene);
         stage.show();
     }
 
@@ -131,6 +136,7 @@ public class Client extends Application {
         MyMoviesController controller = fxmlLoader.getController();
         controller.setClient(this);
         controller.addInfo();
+        scene.getStylesheets().add(css);
 
         // Set the primary stage
         stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
@@ -146,6 +152,7 @@ public class Client extends Application {
         RecentlistPageController controller = fxmlLoader.getController();
         controller.setClient(this);
         controller.addInfo();
+        scene.getStylesheets().add(css);
 
         // Set the primary stage
         stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
@@ -161,6 +168,7 @@ public class Client extends Application {
         MaxRevenueController controller = fxmlLoader.getController();
         controller.setClient(this);
         controller.addInfo();
+        scene.getStylesheets().add(css);
 
         // Set the primary stage
         stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
@@ -177,6 +185,7 @@ public class Client extends Application {
         TotalProfitController controller = fxmlLoader.getController();
         TotalProfitController.setClient(this);
         controller.setProfit(profit);
+        scene.getStylesheets().add(css);
 
         // Set the primary stage
         stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
@@ -192,7 +201,7 @@ public class Client extends Application {
         addController.setClient(this);
         //socketWrapper.write("TRY");
         //controller.addMovieWarning.setText(AddMovieController.labelWarning);
-
+        scene.getStylesheets().add(css);
         // Set the primary stage
         stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
         stage.setScene(scene);
@@ -204,11 +213,22 @@ public class Client extends Application {
         // Loading the controller
         TransferController controller = fxmlLoader.getController();
         controller.setClient(this);
-
+        scene.getStylesheets().add(css);
         // Set the primary stage
         stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
         stage.setScene(scene);
         stage.show();
     }
 
+    public void changePassword() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("change-password.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        ChangePasswordController.client = this;
+        ChangePasswordController.socketWrapper = socketWrapper;
+        scene.getStylesheets().add(css);
+        // Set the primary stage
+        stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());
+        stage.setScene(scene);
+        stage.show();
+    }
 }

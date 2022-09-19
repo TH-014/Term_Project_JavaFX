@@ -44,12 +44,12 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="23.0" layoutY="37.0" prefHeight="18.0" prefWidth="860.0" text="HOME PAGE" textAlignment="CENTER" textFill="#0909e7">
+      <Label alignment="CENTER" layoutX="23.0" layoutY="37.0" prefHeight="18.0" prefWidth="860.0" text="HOME PAGE" textAlignment="CENTER" textFill="#00f6ff">
          <font>
-            <Font size="28.0" />
+            <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Button layoutX="23.0" layoutY="394.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="280.0" text="Change Password">
+      <Button layoutX="23.0" layoutY="394.0" mnemonicParsing="false" onAction="#onChangeClick" prefHeight="40.0" prefWidth="280.0" text="Change Password">
          <font>
             <Font size="18.0" />
          </font>

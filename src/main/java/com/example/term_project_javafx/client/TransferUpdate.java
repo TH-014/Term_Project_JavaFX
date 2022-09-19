@@ -1,6 +1,6 @@
 package com.example.term_project_javafx.client;
 
-import java.util.concurrent.TimeUnit;
+import static java.lang.Thread.sleep;
 
 public class TransferUpdate implements Runnable{
     private MyMoviesController controller;
@@ -22,7 +22,7 @@ public class TransferUpdate implements Runnable{
                 MyMoviesController.transferDitected=false;
             }
             try {
-                TimeUnit.SECONDS.sleep(1);
+                sleep(200);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
