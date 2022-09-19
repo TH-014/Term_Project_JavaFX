@@ -9,37 +9,37 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.term_project_javafx.client.HomePageController">
    <children>
-      <Button layoutX="23.0" layoutY="154.0" mnemonicParsing="false" onAction="#onMyMoviesClick" prefHeight="40.0" prefWidth="280.0" text="My Movies">
+      <Button layoutX="20.0" layoutY="100.0" mnemonicParsing="false" onAction="#onMyMoviesClick" prefHeight="40.0" prefWidth="280.0" text="My Movies">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="23.0" layoutY="194.0" mnemonicParsing="false" onAction="#onMostRecentClick" prefHeight="40.0" prefWidth="280.0" text="Most Recent Movie(s)">
+      <Button layoutX="20.0" layoutY="155.0" mnemonicParsing="false" onAction="#onMostRecentClick" prefHeight="40.0" prefWidth="280.0" text="Most Recent Movie(s)">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="23.0" layoutY="234.0" mnemonicParsing="false" onAction="#onMaximumRevenueClick" prefHeight="40.0" prefWidth="280.0" text="Movie with Maximum Revenue">
+      <Button layoutX="20.0" layoutY="210.0" mnemonicParsing="false" onAction="#onMaximumRevenueClick" prefHeight="40.0" prefWidth="280.0" text="Movie with Maximum Revenue">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="23.0" layoutY="274.0" mnemonicParsing="false" onAction="#onProfitClick" prefHeight="40.0" prefWidth="280.0" text="Total Profit">
+      <Button layoutX="20.0" layoutY="265.0" mnemonicParsing="false" onAction="#onProfitClick" prefHeight="40.0" prefWidth="280.0" text="Total Profit">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="23.0" layoutY="314.0" mnemonicParsing="false" onAction="#onAddMovieClick" prefHeight="40.0" prefWidth="280.0" text="Add Movie">
+      <Button layoutX="20.0" layoutY="320.0" mnemonicParsing="false" onAction="#onAddMovieClick" prefHeight="40.0" prefWidth="280.0" text="Add Movie">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="23.0" layoutY="354.0" mnemonicParsing="false" onAction="#onTransferMovieClick" prefHeight="40.0" prefWidth="280.0" text="Transfer Movie">
+      <Button layoutX="20.0" layoutY="375.0" mnemonicParsing="false" onAction="#onTransferMovieClick" prefHeight="40.0" prefWidth="280.0" text="Transfer Movie">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="23.0" layoutY="474.0" mnemonicParsing="false" onAction="#onExitClick" prefHeight="40.0" prefWidth="280.0" text="Exit" textFill="#df0707">
+      <Button fx:id="exitButton" layoutX="20.0" layoutY="540.0" mnemonicParsing="false" onAction="#onExitClick" prefHeight="40.0" prefWidth="280.0" text="Exit" textFill="#df0707">
          <font>
             <Font size="18.0" />
          </font>
@@ -49,7 +49,7 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Button layoutX="23.0" layoutY="394.0" mnemonicParsing="false" onAction="#onChangeClick" prefHeight="40.0" prefWidth="280.0" text="Change Password">
+      <Button layoutX="20.0" layoutY="430.0" mnemonicParsing="false" onAction="#onChangeClick" prefHeight="40.0" prefWidth="280.0" text="Change Password">
          <font>
             <Font size="18.0" />
          </font>
@@ -59,7 +59,7 @@
             <Image url="@movie-time.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="23.0" layoutY="434.0" mnemonicParsing="false" onAction="#onLogoutClick" prefHeight="40.0" prefWidth="280.0" text="Log out" textFill="#909c3b">
+      <Button fx:id="logoutButton" layoutX="20.0" layoutY="485.0" mnemonicParsing="false" onAction="#onLogoutClick" prefHeight="40.0" prefWidth="280.0" text="Log out" textFill="#909c3b">
          <font>
             <Font size="18.0" />
          </font>

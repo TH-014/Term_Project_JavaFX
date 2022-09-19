@@ -1,3 +1,23 @@
 .root{
    -fx-background-color: dimgrey;
 }
+
+#exitButton{
+   -fx-background-color: #ff0000; -fx-text-fill: white; -fx-background-radius: 50;
+}
+
+#logoutButton{
+   -fx-background-color: #3ae069; -fx-text-fill: #dd0000; -fx-background-radius: 50;
+}
+
+.button{
+   -fx-background-color: #3ae069; -fx-text-fill: white; -fx-background-radius: 50;
+}
+
+.text-field{
+   -fx-background-radius: 50;
+}
+
+.choice-box{
+   -fx-background-radius: 50; -fx-text-size: 18;
+}
