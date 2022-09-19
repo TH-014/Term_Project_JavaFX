@@ -8,6 +8,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 
+import java.io.IOException;
+
 public class ChangePasswordController {
     public PasswordField oldPassBox;
     public PasswordField newPassBox;
@@ -21,10 +23,11 @@ public class ChangePasswordController {
     public String newPass;
     public String renewPass;
 
-    public void onSubmitClick(ActionEvent actionEvent) {
+    public void onSubmitClick(ActionEvent actionEvent) throws IOException {
         oldPass = oldPassBox.getText();
         newPass = newPassBox.getText();
         renewPass = renewPassBox.getText();
+        boolean connection=true;
         if(!newPass.equals(renewPass))
         {
             warningBox.setText("You must type the same new password twice.");
@@ -40,8 +43,10 @@ public class ChangePasswordController {
             catch (Exception e)
             {
                 System.out.println(e);
+                connection=false;
+                client.connectToServer("127.0.0.1",33333);
             }
-            while (true)
+            while (connection)
             {
                 if(serverStatus==null) continue;
                 if(serverStatus.equals("Password successfully changed!"))

@@ -29,6 +29,7 @@ public class TransferController implements Initializable {
     public void onTransferClick(ActionEvent actionEvent) throws Exception {
         projectOperation.movieList = Client.myMovieList;
         List<Movie> movie = projectOperation.searchMovieByTitle(movieName);
+        boolean connection=true;
         if(movie.size()>0)
         {
             MovieWrapper mwr = new MovieWrapper("transfer",movie.get(0).getProductionCompany(),prodCompany,movie.get(0));
@@ -36,11 +37,16 @@ public class TransferController implements Initializable {
                 SocketWrapper sw = client.getSocketWrapper();
                 sw.write(mwr);
             } catch (IOException e) {
+                connection=false;
                 e.printStackTrace();
+                client.connectToServer("127.0.0.1",33333);
             }
-            Client.myMovieList.remove(movie.get(0));
-            System.out.println("MovieWrapper written");
-            client.showHomePage();
+            if(connection)
+            {
+                Client.myMovieList.remove(movie.get(0));
+                System.out.println("MovieWrapper written");
+                client.showHomePage();
+            }
         }
         else {
             warningLabel.setText("This movie does not exists! !! !!!");

@@ -89,8 +89,7 @@ public class Client extends Application {
         LoginPageController controller = fxmlLoader.getController();
         controller.setClient(this);
         scene.getStylesheets().add(css);
-//        Image image = new Image("icon.webp");
-//        stage.getIcons().add(image);
+
         // Set the primary stage
         stage.setTitle("Movie Database: Login");
         stage.setScene(scene);
@@ -199,8 +198,6 @@ public class Client extends Application {
         // Loading the controller
         addController = fxmlLoader.getController();
         addController.setClient(this);
-        //socketWrapper.write("TRY");
-        //controller.addMovieWarning.setText(AddMovieController.labelWarning);
         scene.getStylesheets().add(css);
         // Set the primary stage
         stage.setTitle("Movie Database: "+myMovieList.get(0).getProductionCompany());

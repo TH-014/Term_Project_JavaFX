@@ -36,7 +36,7 @@ public class AddMovieController {
         String genre1 = genre1Box.getText();
         String genre2 = genre2Box.getText();
         String genre3 = genre3Box.getText();
-        boolean checked = true;
+        boolean checked = true, connection=true;
         try {
             year = Integer.parseInt(yearBox.getText());
             time = Integer.parseInt(lengthBox.getText());
@@ -56,9 +56,11 @@ public class AddMovieController {
                 sw.write(new MovieWrapper("add", productionCompany, productionCompany,mv));
             } catch (IOException e) {
                 e.printStackTrace();
+                connection=false;
+                client.connectToServer("127.0.0.1",33333);
             }
             System.out.println("MovieWrapper written");
-            while (true)
+            while (connection)
             {
                 if(labelWarning==null) continue;
                 if(labelWarning.equals("Movie Added!"))
